@@ -1,7 +1,7 @@
 Zadanie:
 Vytvor openlab.sk uvodnu stranku. Mal by si postupovat podla nasledovnych krokov:
 [X] 1. vytvor index.html subor a pridaj don zakladnu strukturu (doctype)
-[] 2. pridaj header - navigaciu stranky (zatial len html)
+[X] 2. pridaj header - navigaciu stranky (zatial len html)
 [] 3. pridaj prvu sekciu z openlab stranky (zatial len html)
 [] 4. pridaj ostatne sekcie (zatial len html)
 [] 5. zacni pisat css do <style> elementu - sprav nahrubo layout - stranka sa zatial graficky nemusi     podobat, nauc sa, ako sa robi layout pomocou css.
