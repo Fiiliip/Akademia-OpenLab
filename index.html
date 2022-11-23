@@ -4,27 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style/a-spacing.scss">
     <title>Openlab.sk - Inštitút stredoškolského odborného vzdelávania zameraný na IT & AI.</title>
 </head>
 
 <style>
+* ::-webkit-scrollbar {
+    display: none;
+}
+
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'SP Pro Display', sans-serif;
     /* border: 1px solid red; */
 }
 
-li {
+ul {
+    padding-left: 0;
     list-style-type: none;
+}
+
+/* ----------------------------------------- */
+
+.flex {
+    display: flex;
+}
+
+.h-center {
+    justify-content: center;
+}
+
+.v-center {
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hidden {
+    display: none;
 }
 </style>
 
-<body>
-    <nav>
+<body class="container">
+    <nav class="flex space-between v-center">
         <a href="https://openlab.sk/"><img src="/images/openlab-logo.svg" alt="Logo OpenLabu."></a>
-        <ul>
+        <ul class="flex">
             <li><a href="https://openlab.sk/">Úvod</a></li>
             <li>
                 <a href="https://openlab.sk/openlaby">OpenLab</a>
-                <ul>
+                <ul class="hidden">
                     <li><a href="https://openlab.sk/hybridlab">HybridLab</a></li>
                     <li><a href="https://openlab.sk/gameslab">GamesLab</a></li>
                     <li><a href="https://openlab.sk/appslab">AppsLab</a></li>
