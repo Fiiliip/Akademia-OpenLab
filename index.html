@@ -4,114 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/a-spacing.scss">
     <title>Openlab.sk - Inštitút stredoškolského odborného vzdelávania zameraný na IT & AI.</title>
 </head>
 
-<style>
-* ::-webkit-scrollbar {
-    display: none;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    font-family: 'SP Pro Display', sans-serif;
-    /* border: 1px solid red; */
-}
-
-ul {
-    padding-left: 0;
-    list-style-type: none;
-}
-
-/* ----------------------------------------- */
-
-.flex {
-    display: flex;
-}
-
-.h-center {
-    justify-content: center;
-}
-
-.v-center {
-    align-items: center;
-}
-
-.space-between {
-    justify-content: space-between;
-}
-
-.row {
-    flex-direction: row;
-}
-
-.container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.hidden {
-    display: none;
-}
-</style>
-
-<body class="container">
-    <nav class="flex space-between v-center">
-        <a href="https://openlab.sk/"><img src="/images/openlab-logo.svg" alt="Logo OpenLabu."></a>
-        <ul class="flex">
-            <li><a href="https://openlab.sk/">Úvod</a></li>
-            <li>
-                <a href="https://openlab.sk/openlaby">OpenLab</a>
-                <ul class="hidden">
-                    <li><a href="https://openlab.sk/hybridlab">HybridLab</a></li>
-                    <li><a href="https://openlab.sk/gameslab">GamesLab</a></li>
-                    <li><a href="https://openlab.sk/appslab">AppsLab</a></li>
+<body>
+    <nav class="navbar">   
+        <div class="container">
+            <a class="navbar-logo" href="https://openlab.sk/"><img src="/images/openlab-logo.svg" alt="Logo OpenLabu."></a>
+            <div class="side-menu">
+                <ul class="navbar-items">
+                    <li class="navbar-item"><a href="https://openlab.sk/">Úvod</a></li>
+                    <li class="navbar-item">
+                        <a href="https://openlab.sk/openlaby">OpenLab</a>
+                        <ul class="hidden">
+                            <li><a href="https://openlab.sk/hybridlab">HybridLab</a></li>
+                            <li><a href="https://openlab.sk/gameslab">GamesLab</a></li>
+                            <li><a href="https://openlab.sk/appslab">AppsLab</a></li>
+                        </ul>
+                    </li>
+                    <li class="navbar-item"><a href="https://openlab.sk/pre-ucitelov">Pre učiteľov</a></li>
+                    <li class="navbar-item"><a href="https://openlab.sk/partneri">Partneri</a></li>
+                    <li class="navbar-item"><a href="https://openlab.sk/moderna-skola">Moderná škola</a></li>
+                    <li class="navbar-item"><a href="https://openlab.sk/caste-otazky">Časté otázky</a></li>
                 </ul>
-            </li>
-            <li><a href="https://openlab.sk/pre-ucitelov">Pre učiteľov</a></li>
-            <li><a href="https://openlab.sk/partneri">Partneri</a></li>
-            <li><a href="https://openlab.sk/moderna-skola">Moderná škola</a></li>
-            <li><a href="https://openlab.sk/caste-otazky">Časté otázky</a></li>
-        </ul>
-        <button>
-            <a href="https://openlab.sk/openlaby">Pridajte sa k nám</a>
-        </button>
+                <button>
+                    <a href="https://openlab.sk/openlaby">Pridajte sa k nám</a>
+                </button>
+            </div>
+        </div>
     </nav>
 
     <article>
-        <section>
-            <div>
-                <h1>Inštitút stredoškolského odborného vzdelávania zameraný na IT & AI</h1>
-                <p>Realizujeme odborné vzdelávanie zamerané na IT pre štátne školy ako nový štandard formálneho vzdelávania</p>
-            </div>
-            <div>
-                <img src="/images/main-home.webp" alt="Študenti OpenLabu. Jeden študent stojí v predu s notebookom v ruke a ostatní za ním.">
+        <section class="mainVisual">
+            <div class="container flex h-center v-center text-center">
+                <div>
+                    <h1>Inštitút stredoškolského odborného vzdelávania zameraný na IT & AI</h1>
+                    <p>Realizujeme odborné vzdelávanie zamerané na IT pre štátne školy ako nový štandard formálneho vzdelávania</p>
+                </div>
+                <div style="width: 100%">
+                    <img src="/images/main-home.webp" alt="Študenti OpenLabu. Jeden študent stojí v predu s notebookom v ruke a ostatní za ním.">
+                </div>
             </div>
         </section>
 
         <section>
-            <h1>Prečo OpenLab?</h1>
-            <p>V OpenLabe študentov učíme najnovšie technológie. Zároveň im dávame veľkú slobodu, pričom ich vedieme k zodpovednosti a samostatnosti, učíme ich princípy partnerského prístupu, pracovať v tíme, trénujeme ich schopnosti sebareflexie a podnecujeme ich kreativitu. Takto študentov pripravujeme osobnostne aj tech zručnosťami na veľké veci, ktoré môžu v budúcnosti tvoriť.</p>
             <div>
+                <h1>Prečo OpenLab?</h1>
+                <p>V OpenLabe študentov učíme najnovšie technológie. Zároveň im dávame veľkú slobodu, pričom ich vedieme k zodpovednosti a samostatnosti, učíme ich princípy partnerského prístupu, pracovať v tíme, trénujeme ich schopnosti sebareflexie a podnecujeme ich kreativitu. Takto študentov pripravujeme osobnostne aj tech zručnosťami na veľké veci, ktoré môžu v budúcnosti tvoriť.</p>
                 <div>
-                    <img src="/images/select.svg" alt="Ikona pre celospoločenský rozvoj.">
-                    <h4>Celospoločenský rozvoj</h4>
-                    <p>Osnovy aj učebné materiály pre všetky tech oblasti sú open source.</p>
-                </div>
-                <div>
-                    <img src="/images/support.svg" alt="Ikona pre učenie praxou.">
-                    <h4>Učenie praxou</h4>
-                    <p>Študentov vedieme k tímovému riešeniu problémov.</p>
-                </div>
-                <div>
-                    <img src="/images/intership.svg" alt="Ikona pre rozvoj talentu.">
-                    <h4>Rozvoj talentu</h4>
-                    <p>Vytvárame šikovné tímy schopné riešiť veľké problémy.</p>
+                    <div>
+                        <img src="/images/select.svg" alt="Ikona pre celospoločenský rozvoj.">
+                        <h4>Celospoločenský rozvoj</h4>
+                        <p>Osnovy aj učebné materiály pre všetky tech oblasti sú open source.</p>
+                    </div>
+                    <div>
+                        <img src="/images/support.svg" alt="Ikona pre učenie praxou.">
+                        <h4>Učenie praxou</h4>
+                        <p>Študentov vedieme k tímovému riešeniu problémov.</p>
+                    </div>
+                    <div>
+                        <img src="/images/intership.svg" alt="Ikona pre rozvoj talentu.">
+                        <h4>Rozvoj talentu</h4>
+                        <p>Vytvárame šikovné tímy schopné riešiť veľké problémy.</p>
+                    </div>
                 </div>
             </div>
         </section>

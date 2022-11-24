@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'SP Pro Display', sans-serif;
+    /* border: 1px solid red; */
+}
+
+* ::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;
+}
+
+/* ZAČIATOK LAYOUT */
+
+nav {
+    border: 5px solid black;
+    background-color: #DEDBDE;
+}
+
+section {
+    border: 5px solid red;
+    background-color: #DEDBDE;
+}
+
+/* KONIEC LAYOUT */
+
+/* ZAČIATOK VŠEOBECNÉ */
+
+.container {
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.h-center {
+    justify-content: center;
+}
+
+.v-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* KONIEC VŠEOBECNÉ */
+
+.navbar {
+    display: flex;
+    justify-content: center;
+
+    height: 80px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    max-width: 1140px;
+}
+
+.side-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+
+.navbar-item {
+    margin: 0 20px;
+    list-style: none;
+}
+
+.mainVisual img {
+    max-width: 50%;
+}
+
+/* .bg-blue {
+    background-color: #3597FF;
+}
+
+*/
+
+/* .navbar div {
+    display: flex;
+    align-items: center;
+
+    background-color: red;
+}
+
+.navbar div ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    list-style: none;
+} */
+
+/* .navbar div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+} */
+
+.hidden {
+    display: none !important;
+}
+
