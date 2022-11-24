@@ -3,7 +3,8 @@
     padding: 0;
     box-sizing: border-box;
 
-    font-family: 'SP Pro Display', sans-serif;
+    font-family: 'SF Pro Display', sans-serif;
+    letter-spacing: 1px;
     /* border: 1px solid red; */
 }
 
@@ -17,14 +18,13 @@
 
 /* ZAČIATOK LAYOUT */
 
-nav {
-    border: 5px solid black;
-    background-color: #DEDBDE;
-}
-
 section {
     border: 5px solid red;
     background-color: #DEDBDE;
+}
+
+a {
+    text-decoration: none;
 }
 
 /* KONIEC LAYOUT */
@@ -61,6 +61,8 @@ section {
     justify-content: center;
 
     height: 80px;
+
+    background-color: #FFFFFF;
 }
 
 .navbar .container {
@@ -69,6 +71,8 @@ section {
     align-items: center;
 
     max-width: 1140px;
+
+    font-size: 0px;
 }
 
 .side-menu {
@@ -80,12 +84,36 @@ section {
 .navbar-items {
     display: flex;
     justify-content: space-between;
-    align-items: center;    
+    align-items: center;
+
+    margin-left: 3.5rem;
+    margin-right: 9.5rem;
 }
 
 .navbar-item {
     margin: 0 20px;
     list-style: none;
+}
+
+.navbar-item a {
+    color: #1a232f !important;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.navbar-item a:hover {
+    color: #3597FF !important;
+}
+
+.join-us-btn {
+    background-color: #3597FF;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 0px;
+}
+
+.join-us-btn a {
+    color: #fff;
 }
 
 .mainVisual img {
