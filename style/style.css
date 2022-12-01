@@ -19,7 +19,7 @@
 /* ZAČIATOK LAYOUT */
 
 section {
-    border: 5px solid red;
+    /* border: 5px solid red; */
     background-color: #DEDBDE;
 }
 
@@ -33,6 +33,30 @@ a {
 
 h1 {
     font-size: 2.5rem;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
 }
 
 .container {
@@ -82,8 +106,6 @@ h1 {
     justify-content: center;
     align-items: center;
 
-    max-width: 1140px;
-
     font-size: 0px;
 }
 
@@ -132,12 +154,18 @@ h1 {
     background-color: #3597FF;
 }
 
+.mainVisual-text-container {
+    padding-right: 3rem;
+}
+
 .mainVisual-image-container {
-    max-width: 63%;
+    max-width: 50%;
 }
 
 .mainVisual-image-container img {
-    max-width: 63%;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 /* .bg-blue {
