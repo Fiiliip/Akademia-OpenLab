@@ -31,6 +31,10 @@ a {
 
 /* ZAČIATOK VŠEOBECNÉ */
 
+h1 {
+    font-size: 2.5rem;
+}
+
 .container {
     width: 100%;
 
@@ -52,6 +56,14 @@ a {
 
 .text-center {
     text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-white {
+    color: #FFFFFF;
 }
 
 /* KONIEC VŠEOBECNÉ */
@@ -116,8 +128,16 @@ a {
     color: #fff;
 }
 
-.mainVisual img {
-    max-width: 50%;
+.mainVisual {
+    background-color: #3597FF;
+}
+
+.mainVisual-image-container {
+    max-width: 63%;
+}
+
+.mainVisual-image-container img {
+    max-width: 63%;
 }
 
 /* .bg-blue {
