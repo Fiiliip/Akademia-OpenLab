@@ -35,6 +35,10 @@ h1 {
     font-size: 2.5rem;
 }
 
+p {
+    line-height: 1.5;
+}
+
 @media (min-width: 576px) {
     .container {
         max-width: 540px;
@@ -75,7 +79,12 @@ h1 {
 }
 
 .v-center {
+    /* align-content: center; */
     align-items: center;
+}
+
+.v-end {
+    align-items: flex-end;
 }
 
 .text-center {
@@ -88,6 +97,14 @@ h1 {
 
 .text-white {
     color: #FFFFFF;
+}
+
+.fw-light {
+    font-weight: 300;
+}
+
+.fw-bold {
+    font-weight: 700;
 }
 
 /* KONIEC VŠEOBECNÉ */
@@ -155,7 +172,7 @@ h1 {
 }
 
 .mainVisual-text-container {
-    padding-right: 3rem;
+    padding-right: 8rem;
 }
 
 .mainVisual-image-container {
