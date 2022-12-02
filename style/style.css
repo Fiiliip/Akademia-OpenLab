@@ -18,7 +18,7 @@
 
 /* ZAČIATOK LAYOUT */
 
-section {
+.gray {
     /* border: 5px solid red; */
     background-color: #DEDBDE;
 }
@@ -33,6 +33,10 @@ a {
 
 h1 {
     font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
 }
 
 p {
@@ -70,6 +74,11 @@ p {
     margin-right: auto;
 }
 
+.flex-equal {
+    flex: 1 1 0px;
+    width: 0;
+}
+
 .flex {
     display: flex;
 }
@@ -97,6 +106,14 @@ p {
 
 .text-white {
     color: #FFFFFF;
+}
+
+.text-gray {
+    color: #566b8d;
+}
+
+.fs-7 {
+    font-size: 0.875rem;
 }
 
 .fw-light {
