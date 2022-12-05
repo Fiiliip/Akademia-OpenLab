@@ -83,8 +83,16 @@ p {
     display: flex;
 }
 
+.grid {
+    display: grid;
+}
+
 .h-center {
     justify-content: center;
+}
+
+.h-end {
+    justify-content: flex-end;
 }
 
 .v-center {
@@ -102,6 +110,10 @@ p {
 
 .text-left {
     text-align: left;
+}
+
+.text-right {
+    text-align: right;
 }
 
 .text-white {
@@ -122,6 +134,10 @@ p {
 
 .fw-bold {
     font-weight: 700;
+}
+
+.lh-1 {
+    line-height: 1;
 }
 
 /* KONIEC VŠEOBECNÉ */
@@ -201,6 +217,59 @@ p {
     max-width: 100%;
     object-fit: cover;
 }
+
+.vision-text-container {
+    max-width: 50%;
+}
+
+/* .vision>div:nth-child(2) {
+    margin-left: auto;
+} */
+
+.vision .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.vision-items {
+    margin-left: auto;
+}
+
+.vision-item {
+    width: 233px;
+    border-radius: 4px;
+}
+
+.vision-item:nth-child(1) {
+    color: #5b94d7;
+    background-color: rgba(221, 236, 251, 0.4);
+}
+
+.vision-item:nth-child(2) {
+    color: #5cc19a;
+    background-color: rgba(156, 238, 204, 0.4);
+}
+
+.vision-item:nth-child(3) {
+    color: #dbca68;
+    background-color: rgba(238, 226, 156, 0.4);
+}
+
+.vision-item:nth-child(4) {
+    color: #b95e73;
+    background-color: rgba(238, 156, 156, 0.4);
+}
+
+.vision-item p:nth-child(1) {
+    font-size: 90px;
+}
+
+.vision-item p:nth-child(2) {
+    font-size: 18px;
+}
+
+
+
 
 /* .bg-blue {
     background-color: #3597FF;
