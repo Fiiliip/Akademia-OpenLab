@@ -120,12 +120,20 @@ p {
     text-align: right;
 }
 
+.text-primary {
+    color: #3597ff;
+}
+
 .text-white {
     color: #FFFFFF;
 }
 
 .text-gray {
     color: #566b8d;
+}
+
+.fs-6 {
+    font-size: 1.125rem;
 }
 
 .fs-7 {
@@ -303,36 +311,44 @@ p {
     display: block;
 }
 
-
-/* .bg-blue {
-    background-color: #3597FF;
+.school-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
 }
 
-*/
-
-/* .navbar div {
-    display: flex;
-    align-items: center;
-
-    background-color: red;
+.notice img {
+    height: 15px;
 }
 
-.navbar div ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.notice p {
+    font-weight: 500;
+    color: red;
+}
 
-    list-style: none;
-} */
+.notice-text-container {
+    display: none;
+    position: absolute;
 
-/* .navbar div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 0 20px;
-} */
+    width: 600px;
+
+    margin-bottom: 50px;
+    padding: 15px;
+    top: -10px;
+
+    font-size: 14px;
+    
+    transform: translateY(-100%);
+
+    background: white;
+
+    border: 1px rgba(0, 0, 0, .2) solid;
+    border-radius: 8px;
+}
+
+.notice:hover + .notice-text-container {
+    display: block;
+}
 
 .hidden {
     display: none !important;
