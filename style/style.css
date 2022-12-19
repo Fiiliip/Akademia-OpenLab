@@ -350,6 +350,52 @@ p {
     display: block;
 }
 
+.students-thoughts {
+    background-color: #f3f9ff;
+}
+
+.students-thoughts-img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.quote-container {
+    position: relative;
+}
+
+.quote {
+    position: absolute;
+    top: -30px;
+    left: -15px;
+}
+
+.students-thoughts-nav-buttons {
+    position: absolute;
+    float: right;
+    right: 0;
+    bottom: 50px;
+}
+
+.students-thoughts button {
+    width: 33px;
+    height: 33px;
+
+    border: 0px;
+}
+
+.students-thoughts button:first-of-type {
+    /* background-image: url(../images/arrow-slide-left.svg); */
+    background: url(../images/arrow-slide-left.svg) no-repeat center center;
+    /* background-size: cover; */
+}
+
+.students-thoughts button:last-of-type {
+    /* background-image: url(../images/arrow-slide-right.svg); */
+    background: url(../images/arrow-slide-right.svg) no-repeat center center;
+    background-size: cover;
+}
+
 .hidden {
     display: none !important;
 }
