@@ -382,18 +382,32 @@ p {
     height: 33px;
 
     border: 0px;
+
+    cursor: pointer;
 }
 
 .students-thoughts button:first-of-type {
     /* background-image: url(../images/arrow-slide-left.svg); */
     background: url(../images/arrow-slide-left.svg) no-repeat center center;
     /* background-size: cover; */
+    transition: 0.3s ease-in-out;
+}
+
+.students-thoughts button:hover {
+    background: url(../images/arrow-slide-left-active.svg) no-repeat center center;;
 }
 
 .students-thoughts button:last-of-type {
     /* background-image: url(../images/arrow-slide-right.svg); */
     background: url(../images/arrow-slide-right.svg) no-repeat center center;
-    background-size: cover;
+    transition: 0.3s ease-in-out;
+    /* background-size: cover; */
+}
+
+.students-thoughts button:last-of-type:hover {
+    /* background-image: url(../images/arrow-slide-right.svg); */
+    background: url(../images/arrow-slide-right-active.svg) no-repeat center center;
+    /* background-size: cover; */
 }
 
 .hidden {
