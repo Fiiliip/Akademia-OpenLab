@@ -74,6 +74,10 @@ p {
     margin-right: auto;
 }
 
+.relative {
+    position: relative;
+}
+
 .absolute {
     position: absolute;
 }
@@ -152,7 +156,21 @@ p {
     line-height: 1;
 }
 
+.z-1 {
+    z-index: 1;
+}
+
 /* KONIEC VŠEOBECNÉ */
+
+.mainVisual .letter {
+    right: -241px;
+    bottom: 70px;
+    /* width: 200px; */
+}
+
+.mainVisual .letter img {
+    width: 482px;
+}
 
 header div {
     height: 50px;
@@ -366,6 +384,15 @@ header div a {
 
 .notice:hover + .notice-text-container {
     display: block;
+}
+
+.schools .letter {
+    right: -218px;
+    bottom: -280px;
+}
+
+.schools .letter img {
+    width: 436px;
 }
 
 .students-thoughts {
