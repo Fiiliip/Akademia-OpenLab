@@ -154,6 +154,24 @@ p {
 
 /* KONIEC VŠEOBECNÉ */
 
+header div {
+    height: 50px;
+    font-size: 13px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+header div a {
+    padding: 6px 10px;
+
+    font-size: 12px;
+
+    color: #989ca2;
+    background-color: rgba(152, 156, 162, 0.15);
+
+    border: 1px solid rgba(152, 156, 162, 0.15);
+    border-radius: 100px;
+}
+
 .navbar {
     display: flex;
     justify-content: center;
