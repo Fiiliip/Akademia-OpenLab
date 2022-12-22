@@ -1,13 +1,5 @@
-[] V sekcii "Naša vízia v OpenLabe" použi grid.
-[] V sekcii "Čo si o OpenLabe myslia študenti?" použi na quote float.
+X - hotovo
 
-svetlo modrá - 3597FF
-
-Odkaz na Discord komunitu
-[] Pridať HTML sekcie.
-[] Pridať CSS sekcie.
-
-Prvá sekcia - mainVisual
-[] Opraviť časť nadpisu nech má tenšie písmo, než má teraz.
-
-
+TODO:
+[] Opraviť písmená po bokoch stránky, nech majú konštantnú veľkosť pri rôznych rozlíšeniach
+[X] Zapracovať review z 21.12.2022

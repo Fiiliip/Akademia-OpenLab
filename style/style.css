@@ -5,15 +5,14 @@
 
     font-family: 'SF Pro Display', sans-serif;
     letter-spacing: 1px;
+
+    -ms-overflow-style: none;
+
     /* border: 1px solid red; */
 }
 
 * ::-webkit-scrollbar {
     display: none;
-}
-
-* {
-    -ms-overflow-style: none;
 }
 
 /* ZAČIATOK LAYOUT */
@@ -160,17 +159,11 @@ p {
     z-index: 1;
 }
 
+.z-2 {
+    z-index: 2;
+}
+
 /* KONIEC VŠEOBECNÉ */
-
-.mainVisual .letter {
-    right: -241px;
-    bottom: 70px;
-    /* width: 200px; */
-}
-
-.mainVisual .letter img {
-    width: 482px;
-}
 
 header div {
     height: 50px;
@@ -184,9 +177,9 @@ header div a {
     font-size: 12px;
 
     color: #989ca2;
-    background-color: rgba(152, 156, 162, 0.15);
+    background-color: #989ca226;
 
-    border: 1px solid rgba(152, 156, 162, 0.15);
+    border: 1px solid #989ca226;
     border-radius: 100px;
 }
 
@@ -266,6 +259,16 @@ header div a {
     object-fit: cover;
 }
 
+.mainVisual .letter {
+    right: -241px;
+    bottom: 70px;
+    /* width: 200px; */
+}
+
+.mainVisual .letter img {
+    width: 482px;
+}
+
 .vision-text-container {
     max-width: 50%;
 }
@@ -290,22 +293,22 @@ header div a {
 
 .vision-item:nth-child(1) {
     color: #5b94d7;
-    background-color: rgba(221, 236, 251, 0.4);
+    background-color: #ddecfb66;
 }
 
 .vision-item:nth-child(2) {
     color: #5cc19a;
-    background-color: rgba(156, 238, 204, 0.4);
+    background-color: #9ceecc66;
 }
 
 .vision-item:nth-child(3) {
     color: #dbca68;
-    background-color: rgba(238, 226, 156, 0.4);
+    background-color: #eee29c66;
 }
 
 .vision-item:nth-child(4) {
     color: #b95e73;
-    background-color: rgba(238, 156, 156, 0.4);
+    background-color: #ee9c9c66;
 }
 
 .vision-item p:nth-child(1) {
@@ -327,8 +330,9 @@ header div a {
 
 .labs-card:hover {
     border-radius: 6px;
-    transition: 0.3s;;
-    box-shadow: 0px 1px 20px rgb(99 118 149 / 15%);
+    transition: 0.3s;
+    box-shadow: 0px 1px 20px #63769526;
+    cursor: pointer;
 }
 
 .labs-card img {
@@ -378,7 +382,7 @@ header div a {
 
     background: white;
 
-    border: 1px rgba(0, 0, 0, .2) solid;
+    border: 1px #00000033 solid;
     border-radius: 8px;
 }
 
@@ -439,7 +443,7 @@ header div a {
 }
 
 .students-thoughts button:hover {
-    background: url(../images/arrow-slide-left-active.svg) no-repeat center center;;
+    background: url(../images/arrow-slide-left-active.svg) no-repeat center center;
 }
 
 .students-thoughts button:last-of-type {
@@ -467,7 +471,8 @@ header div a {
 .join-us-card:hover {
     border-radius: 6px;
     transition: 0.3s;
-    box-shadow: 0px 1px 20px rgb(99 118 149 / 15%);
+    box-shadow: 0px 1px 20px #63769526;
+    cursor: pointer;
 }
  
 .join-us-card:hover img:first-of-type {
