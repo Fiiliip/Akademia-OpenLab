@@ -261,7 +261,7 @@
                     </div>
                 </div>
             </div>
-            <div>
+            <div class="hidden">
                 <div>
                     <div>
                         <h4>LabMastri v OpenLabe</h4>
@@ -297,44 +297,61 @@
             </div>
         </section>
 
-        <section>
-            <h1>Pozrite si študentské projekty</h1>
-            <p>Stredoškoláci v OpenLaboch pracujú na reálnych projektoch v spolupráci s firmami pričom získavajú praktické zručnosti a osvojujú si prístup, ktorým neskôr posunú svet technológií a celú spoločnosť vpred.</p>
-            <div>
-                <h4>Projekty študentov v OpenLabe</h4>
-                <div>
-                    <div>
-                        <h2>Študentský projekt Mapovanie z HybridLabu</h2>
-                        <p>Mapovanie je hybridná aplikácia, ktorá umožní ľuďom so spoločnými záľubami deliť sa o svoje obľúbené miesta a ukladať ich do komunitnej mapy. Aplikáciu tak môžu využívať ľudia z rôznych komunít. Užívateľ sa jednoducho pridá do skupiny, ktorá ho zaujíma, a následne môže vidieť už “zmapované” miesta alebo pridávať nové. Prehľad príspevkov a skupín mu zobrazuje dostupná mapa. Do aplikácie sa užívateľ vie prihlásiť cez SSO, t.j. prihlásenie pomocou služby tretej strany, napr. Facebook alebo Apple ID účet. Na vývoj študenti použili technológie - Ionic, OctoberCMS a Vue. Aktuálne je aplikácia v MVP verzii.</p>
+        <section class="students-projects">
+            <div class="container py-5">
+                <div class="pb-5 px-3">
+                    <h1 class="fw-light text-center mb-5">Pozrite si <span class="fw-bold">študentské projekty</span></h1>
+                    <p class="text-gray text-center px-5 mx-5 mb-5">Stredoškoláci v OpenLaboch pracujú na reálnych projektoch v spolupráci s firmami pričom získavajú praktické zručnosti a osvojujú si prístup, ktorým neskôr posunú svet technológií a celú spoločnosť vpred.</p>
+                </div>
+                <div class="mb-4">
+                    <h4 class="fw-light fs-6 mb-5">Projekty študentov <span class="fw-bold">v OpenLabe</span></h4>
+                    <div class="flex space-between">
+                        <div class="students-projects-project-text-container">
+                            <h2 class="mb-5">Študentský projekt Mapovanie z HybridLabu</h2>
+                            <p class="text-gray mb-3">Mapovanie je hybridná aplikácia, ktorá umožní ľuďom so spoločnými záľubami deliť sa o svoje obľúbené miesta a ukladať ich do komunitnej mapy. Aplikáciu tak môžu využívať ľudia z rôznych komunít. Užívateľ sa jednoducho pridá do skupiny, ktorá ho zaujíma, a následne môže vidieť už “zmapované” miesta alebo pridávať nové. Prehľad príspevkov a skupín mu zobrazuje dostupná mapa. Do aplikácie sa užívateľ vie prihlásiť cez SSO, t.j. prihlásenie pomocou služby tretej strany, napr. Facebook alebo Apple ID účet. Na vývoj študenti použili technológie - Ionic, OctoberCMS a Vue. Aktuálne je aplikácia v MVP verzii.</p>
+                        </div>
+                        <div class="relative students-projects-img-container px-3">
+                            <div class="students-projects-play-img-container">
+                                <a href="https://www.youtube.com/embed/H1G1pAuRBtY">
+                                    <img src="/images/maxresdefault_1.jpg" alt="Študent, ktorý pracoval na projekte Mapovanie.">
+                                    <img class="absolute" src="/images/play.svg" alt="Prehrať.">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div>
-                        <a href="https://www.youtube.com/embed/H1G1pAuRBtY"><img src="/images/maxresdefault_1.jpg" alt="Študent, ktorý pracoval na projekte Mapovanie."></a>
+                    <div class="hidden">
+                        <div>
+                            <h2>Študentský projekt RealTopia z GamesLabu</h2>
+                            <p>RealTopia je fantasy hra s 2D grafikou, ktorá nesie environmentálne posolstvo. Je v nej zakomponovaných množstvo faktov o ekológii, globalizácii a svete okolo nás. V jadre je jednoduchá Open World stratégia s Resource Managementom a Pixel Art grafikou. Študenti ju vyvíjali v multiplatformovom hernom engine - Unity s využitím jazyku C#. Hra je dostupná pre Android. Tento študentský projekt prebehol v spolupráci s Ambrelou - platformou rozvojových organizácií v rámci ich medzinárodného projektu Bridge 47.</p>
+                        </div>
+                        <div>
+                            <a href="https://www.youtube.com/embed/8ZKEpcpHGCw"><img src="/images/student-project-realtopia.webp" alt="Študent, ktorý pracoval na projekte RealTopia."></a>
+                        </div>
+                    </div>
+                    <div class="hidden">
+                        <div>
+                            <h2>Študentský projekt Renmo z AppsLabu</h2>
+                            <p>Renmo je softvérová aplikácia, ktorá slúži ako rezervačný systém. Užívateľ si vie prostredníctvom systému ľahko a rýchlo zarezervovať rôzne služby, napr. objednať sa ku kaderníkovi. V aplikácii si takisto firmy vedia nastaviť detailné informácie o sebe a ponuku svojich služieb. Aplikácia vie uľahčiť prácu aj zamestnancom, ktorí vidia aktívne rezervácie pre daný deň ale aj nasledujúce. Na vývoj študenti použili technológie: MySQL, SpringBoot a Angular.</p>
+                        </div>
+                        <div>
+                            <a href="https://www.youtube.com/embed/Qg30AVAGo5Y"><img src="/images/maxresdefault_2.jpg" alt="Študenti, ktorí pracovali na projekte Renmo."></a>
+                        </div>
+                    </div>
+                    <div class="students-projects-nav-buttons">
+                        <button type="button"></button>
+                        <button type="button"></button>
+                    </div>
+                    <div class="flex h-center pt-2">
+                        <button class="mx-1 slide-circle-button"></button>
+                        <button class="mx-1 slide-circle-button"></button>
+                        <button class="mx-1 slide-circle-button"></button>
                     </div>
                 </div>
                 <div>
-                    <div>
-                        <h2>Študentský projekt RealTopia z GamesLabu</h2>
-                        <p>RealTopia je fantasy hra s 2D grafikou, ktorá nesie environmentálne posolstvo. Je v nej zakomponovaných množstvo faktov o ekológii, globalizácii a svete okolo nás. V jadre je jednoduchá Open World stratégia s Resource Managementom a Pixel Art grafikou. Študenti ju vyvíjali v multiplatformovom hernom engine - Unity s využitím jazyku C#. Hra je dostupná pre Android. Tento študentský projekt prebehol v spolupráci s Ambrelou - platformou rozvojových organizácií v rámci ich medzinárodného projektu Bridge 47.</p>
-                    </div>
-                    <div>
-                        <a href="https://www.youtube.com/embed/8ZKEpcpHGCw"><img src="/images/student-project-realtopia.webp" alt="Študent, ktorý pracoval na projekte RealTopia."></a>
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <h2>Študentský projekt Renmo z AppsLabu</h2>
-                        <p>Renmo je softvérová aplikácia, ktorá slúži ako rezervačný systém. Užívateľ si vie prostredníctvom systému ľahko a rýchlo zarezervovať rôzne služby, napr. objednať sa ku kaderníkovi. V aplikácii si takisto firmy vedia nastaviť detailné informácie o sebe a ponuku svojich služieb. Aplikácia vie uľahčiť prácu aj zamestnancom, ktorí vidia aktívne rezervácie pre daný deň ale aj nasledujúce. Na vývoj študenti použili technológie: MySQL, SpringBoot a Angular.</p>
-                    </div>
-                    <div>
-                        <a href="https://www.youtube.com/embed/Qg30AVAGo5Y"><img src="/images/maxresdefault_2.jpg" alt="Študenti, ktorí pracovali na projekte Renmo."></a>
-                    </div>
-                </div>
-                <div>
-                    <button><img src="/images/arrow-right-blue.svg" alt="Ikona šípky doľava."></button> <!-- TODO: otoč šípku, aby smerovala doľava -->
-                    <button><img src="/images/arrow-right-blue.svg" alt="Ikona šípky doprava."></button>
-                </div>
-                <div>
-                    <a href="https://www.youtube.com/channel/UCinIL-0-qCLU6zE5fo1SPNw"><p>Pozrieť si všetky projekty</p> <img src="/images/arrow-right-blue.svg" alt="Ikona šípky doprava."></a>
+                    <a class="flex v-center text-center text-primary" href="https://www.youtube.com/channel/UCinIL-0-qCLU6zE5fo1SPNw">
+                        Pozrieť si všetky projekty 
+                        <img class="ml-2" src="/images/arrow-right-blue.svg" alt="Ikona šípky doprava.">
+                    </a>
                 </div>
             </div>
         </section>

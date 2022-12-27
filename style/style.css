@@ -94,12 +94,20 @@ p {
     display: grid;
 }
 
+.hidden {
+    display: none !important;
+}
+
 .h-center {
     justify-content: center;
 }
 
 .h-end {
     justify-content: flex-end;
+}
+
+.space-between {
+    justify-content: space-between;
 }
 
 .v-center {
@@ -487,7 +495,103 @@ header div a {
     display: block;
 }
 
-.hidden {
-    display: none !important;
+.students-projects h4 {
+    position: relative;
 }
 
+.students-projects h4::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    bottom: -25px;
+    width: 50px;
+    height: 1px;
+    background-color: #566b8d80;
+}
+
+.students-projects-project-text-container {
+    max-width: 33%;
+} 
+
+.students-projects-img-container {
+    max-width: 50%;
+}
+
+.students-projects-play-img-container a {
+    display: block;
+}
+
+.students-projects-img-container img:not(.absolute) {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
+.students-projects-play-img-container img.absolute {
+    left: 50%;
+    margin-left: -33px;
+    top: 50%;
+    margin-top: -99px;
+}
+
+.students-projects-nav-buttons button {
+    width: 33px;
+    height: 33px;
+
+    border: 0px;
+
+    cursor: pointer;
+}
+
+.students-projects-nav-buttons button:first-of-type {
+    /* background-image: url(../images/arrow-slide-left.svg); */
+    background: url(../images/arrow-slide-left.svg) no-repeat center center;
+    /* background-size: cover; */
+    transition: 0.3s ease-in-out;
+}
+
+.students-projects-nav-buttons button:hover {
+    background: url(../images/arrow-slide-left-active.svg) no-repeat center center;
+}
+
+.students-projects-nav-buttons button:last-of-type {
+    /* background-image: url(../images/arrow-slide-right.svg); */
+    background: url(../images/arrow-slide-right.svg) no-repeat center center;
+    transition: 0.3s ease-in-out;
+    /* background-size: cover; */
+}
+
+.students-projects-nav-buttons button:last-of-type:hover {
+    /* background-image: url(../images/arrow-slide-right.svg); */
+    background: url(../images/arrow-slide-right-active.svg) no-repeat center center;
+    /* background-size: cover; */
+}
+
+.slide-circle-button {
+    height: 9px;
+    width: 9px;
+    
+    background: none;
+    background-color: #3597ff33;
+
+    border-radius: 50%;
+    border: none;
+
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.slide-circle-button:hover {
+    background-color: #3597ff;
+}
+
+.slide-circle-button:active {
+    background-color: #3597ff;
+}
+
+/* TODO: Odstráň tento štýl. Je to len na testovanie, resp. na preview. */
+.slide-circle-button:first-of-type {
+    background-color: #3597ff;
+}
