@@ -66,6 +66,12 @@ p {
     }
 }
 
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
 .container {
     width: 100%;
 
@@ -153,6 +159,10 @@ p {
 
 .fw-light {
     font-weight: 300;
+}
+
+.fw-medium {
+    font-weight: 500;
 }
 
 .fw-bold {
@@ -495,6 +505,10 @@ header div a {
     display: block;
 }
 
+.students-projects>div.container {
+    border-bottom: 1px solid #d7eaff;
+}
+
 .students-projects h4 {
     position: relative;
 }
@@ -512,6 +526,10 @@ header div a {
 .students-projects-project-text-container {
     max-width: 33%;
 } 
+
+.students-projects-project-text-container>h2 {
+    font-size: 1.75rem;
+}
 
 .students-projects-img-container {
     max-width: 50%;
@@ -594,4 +612,38 @@ header div a {
 /* TODO: Odstráň tento štýl. Je to len na testovanie, resp. na preview. */
 .slide-circle-button:first-of-type {
     background-color: #3597ff;
+}
+
+.special>div.container {
+    border-bottom: 1px solid #d7eaff;
+}
+
+.special .grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-left: 7em;
+    margin-right: 7em;
+}
+
+.special .grid>div {
+    padding-top: 3em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+}
+
+.know-us .flex {
+    flex-wrap: wrap;
+}
+
+.know-us .flex>div {
+    flex: 0 0 auto;
+    width: 25%;
+}
+
+.know-us-img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+
+    border-radius: 3px;
 }
