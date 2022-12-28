@@ -116,6 +116,10 @@ p {
     justify-content: space-between;
 }
 
+.space-around {
+    justify-content: space-around;
+}
+
 .v-center {
     /* align-content: center; */
     align-items: center;
@@ -660,4 +664,72 @@ header div a {
 
 .support-us h1 {
     font-size: 2rem;
+}
+
+.who-behind-title {
+    width: 33.33333%;
+}
+
+.who-behind-imgs {
+    width: 66.66666%;
+}
+
+.instagram-feed {
+    margin-top: 6.25rem;
+    margin-bottom: 6.25rem;
+}
+
+.instagram-feed .flex {
+    flex-wrap: nowrap;
+}
+
+.instagram-feed-item div {
+    display: none;
+}
+
+.instagram-feed-item a:hover ~ div {
+    display: block;
+}
+
+.instagram-feed-item a:hover {
+    filter: brightness(50%);
+    cursor: pointer;
+}
+
+.instagram-feed img {
+    max-width: 100%;
+    height: auto;
+}
+
+.instagram-feed-item div.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+}
+
+.instagram-feed-item div.relative p {
+    position: absolute;
+    color: white;
+    bottom: 0.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.instagram-feed-item div.relative img {
+    position: absolute;
+    bottom: 0.3rem;
+    right: 1%;
+    fill: #FFFFFF; /* TODO: Vyriešiť, prečo sa mi nemení farba. */
+}
+
+.instagram-feed-item div.relative div {
+    cursor: pointer;
+}
+
+.instagram-feed-item a {
+    width: 100%;
+    height: 100%;
 }
