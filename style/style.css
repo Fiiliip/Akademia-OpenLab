@@ -818,3 +818,35 @@ header div a {
 
     border-radius: 50%;
 }
+
+footer * {
+    font-size: 13px;
+}
+
+footer>.container>.flex>div:nth-child(1) {
+    width: 33.33333%;
+}
+
+footer>.container>.flex>div:nth-child(2) {
+    width: 25%;
+}
+
+footer>.container>.flex>div:nth-child(3) {
+    width: 16.66666%;
+}
+
+footer>.container>.flex>div:nth-child(4) {
+    width: 25%;
+}
+
+footer a {
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #0a58ca;
+}
+
+footer .social-media-wrapper img {
+    max-height: 20px;
+}
