@@ -630,13 +630,23 @@
             </div>
         </section>
 
-        <section>
-            <div>
-                <div>
-                    <h4>Prihláste sa do nášho newslettra a budete mať<br>čerstvé informácie o živote v OpenLabe.</h4>
-                </div>
-                <div>
-                    <input type="text" placeholder="Sem napíšte svoj e-mail"> <!-- TODO: Pridaj ikonu šípky na odoslanie. -->
+        <section class="newsletter py-5">
+            <div class="container py-5">
+                <div class="flex py-5 px-5 mb-5 v-center">
+                    <div>
+                        <h4 class="fw-light">Prihláste sa do nášho newslettra a budete mať<br><span class="fw-bold">čerstvé informácie o živote v OpenLabe.</span></h4>
+                    </div>
+                    <div class="relative">
+                        <input class="py-2 pr-5 pl-3 fs-7" type="email" placeholder="Sem napíšte svoj e-mail">
+                        <div class="absolute flex v-center newsletter-send-wrapper">
+                            <button id="send-button" class="flex v-center">
+                                <img class="px-2 py-1" src="/images/send.svg" alt="Odoslať.">
+                            </button>
+                            <div id="spinning-circle" class="hidden spinning-circle-big-circle flex h-center">
+                                <div class="spinning-circle-small-circle"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -667,3 +677,14 @@
 </body>
 
 </html>
+
+<script>
+    document.getElementById('send-button').addEventListener('click', function() {
+        document.getElementById('send-button').classList.add('hidden');
+        document.getElementById('spinning-circle').classList.remove('hidden');
+        setTimeout(function() {
+            document.getElementById('spinning-circle').classList.add('hidden');
+            document.getElementById('send-button').classList.remove('hidden');
+        }, 2000);
+    });
+</script>
