@@ -282,9 +282,12 @@ header div a {
 }
 
 .mainVisual .letter {
-    right: -241px;
-    bottom: 70px;
-    /* width: 200px; */
+    width: 241px;
+
+    right: 0;
+    bottom: -240px;
+
+    overflow: hidden;
 }
 
 .mainVisual .letter img {
@@ -373,6 +376,10 @@ header div a {
     display: block;
 }
 
+.school-container {
+    width: 41.66666%;
+}
+
 .school-container img {
     max-width: 100%;
     max-height: 100%;
@@ -413,8 +420,12 @@ header div a {
 }
 
 .schools .letter {
-    right: -218px;
+    width: 213px;
+
+    right: 0;
     bottom: -280px;
+
+    overflow: hidden;
 }
 
 .schools .letter img {
@@ -635,6 +646,22 @@ header div a {
     padding-right: 0.75em;
 }
 
+.special .letter {
+    width: 435px;
+
+    top: -190px;
+    left: -220px;
+
+    overflow: hidden;
+
+    z-index: -1;
+}
+
+.special .letter img {
+    width: 100%;
+    height: 100%;
+}
+
 .know-us .flex {
     flex-wrap: wrap;
 }
@@ -820,7 +847,7 @@ header div a {
 }
 
 footer {
-    overflow: hidden !important;
+    overflow: hidden;
 }
 
 footer * {
