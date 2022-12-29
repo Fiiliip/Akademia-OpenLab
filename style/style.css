@@ -520,6 +520,31 @@ header div a {
     display: block;
 }
 
+.join-us-slider-card .absolute {
+    background-color: #A54FA2;
+}
+
+.join-us-slider-card-info {
+    max-width: 585px;
+    left: -18px;
+    bottom: 15%;
+    padding: 40px 32px;
+    height: 100%;
+}
+
+.join-us-slider-card-img-container {
+    height: 500px;
+    width: 50%;
+}
+
+.join-us-slider-card-img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+
+    border-radius: 20px;
+}
+
 .students-projects>div.container {
     border-bottom: 1px solid #d7eaff;
 }
