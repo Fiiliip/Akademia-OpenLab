@@ -819,6 +819,10 @@ header div a {
     border-radius: 50%;
 }
 
+footer {
+    overflow: hidden !important;
+}
+
 footer * {
     font-size: 13px;
 }
@@ -849,4 +853,9 @@ footer a:hover {
 
 footer .social-media-wrapper img {
     max-height: 20px;
+}
+
+footer .container>img {
+    left: 100%;
+    top: 20px;
 }
