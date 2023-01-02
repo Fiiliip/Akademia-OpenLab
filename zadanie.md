@@ -1,4 +1,4 @@
-Zadanie:
+Zadanie 1:
 Vytvor openlab.sk uvodnu stranku. Mal by si postupovat podla nasledovnych krokov:
 [X] 1. vytvor index.html subor a pridaj don zakladnu strukturu (doctype)
 [X] 2. pridaj header - navigaciu stranky (zatial len html)
@@ -25,3 +25,10 @@ Info k fungovaniu akademie:
     - ak za dany den nemozes pracovat, tak napis status, ze dnes nerobis
     - ak si beries dovolenku, nemusis pisat statusy, len nas informuj, ze od kedy do kedy budes mat dovolenku / nebudes dostupny
     - po commitnuti ti spravime na kod feedback
+
+Zadanie 2 (neoficiálne pre mňa):
+[] 1. nastyluj stranku, aby sa co najviac podobala originalu
+[] 2. prepis css, kt. si mal v html subore do separatneho css filu
+[] 3. sprav registracny formular v separatnom html subore, precvic si v nom vsetky input typy kt. existuju... sprav preklik z index.html na tuto stranku
+[] 4. vytvor globalny css subor s globalnym css (vseobacne nastavenie stylov pre elementy)
+[] 5. oddel css ktore patri pre stranku form.html so separatneho css suboru

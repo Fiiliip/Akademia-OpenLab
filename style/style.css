@@ -193,7 +193,7 @@ header div {
     border-bottom: 1px solid #dee2e6;
 }
 
-header div a {
+.discord-wrapper {
     padding: 6px 10px;
 
     font-size: 12px;
@@ -203,6 +203,16 @@ header div a {
 
     border: 1px solid #989ca226;
     border-radius: 100px;
+}
+
+
+.discord-wrapper p {
+    transition: 0.3s ease-in-out;
+}
+
+.discord-wrapper p:hover {
+    color: #212529;
+    transition: 0.3s ease-in-out;
 }
 
 .navbar {
@@ -238,18 +248,53 @@ header div a {
 }
 
 .navbar-item {
-    margin: 0 20px;
     list-style: none;
 }
 
-.navbar-item a {
-    color: #1a232f !important;
-    font-size: 14px;
-    font-weight: 500;
+.dropdown>a::after {
+    position: relative;
+    top: 12px;
+    left: 5px;
+
+    content: "";
+
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid black;
+    
+    transition: 0.15s ease-in-out;
 }
 
-.navbar-item a:hover {
-    color: #3597FF !important;
+.dropdown:hover>a::after {
+    border-top: 6px solid #3597FF;
+    transition: 0.15s ease-in-out;
+}
+
+.dropdown ul {
+    display: none;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+}
+
+.dropdown:hover ul {
+    display: block;
+}
+
+.navbar-item a {
+    color: #1a232f;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.15s ease-in-out;
+}
+
+/* .navbar-item a:hover:not(.dropdown) {
+    color: #3597FF;
+    transition: 0.15s ease-in-out;
+} */
+
+.navbar-item a:hover, .dropdown:hover>a {
+    color: #3597FF;
+    transition: 0.15s ease-in-out;
 }
 
 .join-us-btn {
