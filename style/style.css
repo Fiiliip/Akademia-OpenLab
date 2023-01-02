@@ -285,7 +285,7 @@ header div a {
     width: 241px;
 
     right: 0;
-    bottom: -240px;
+    top: 260px;
 
     overflow: hidden;
 }
@@ -403,11 +403,11 @@ header div a {
 
     margin-bottom: 50px;
     padding: 15px;
-    top: -10px;
+    bottom: 115px;
 
     font-size: 14px;
     
-    transform: translateY(-100%);
+    transform: translateY(100%);
 
     background: white;
 
@@ -423,7 +423,7 @@ header div a {
     width: 213px;
 
     right: 0;
-    bottom: -280px;
+    top: 300px;
 
     overflow: hidden;
 }
@@ -434,6 +434,10 @@ header div a {
 
 .students-thoughts {
     background-color: #f3f9ff;
+}
+
+.students-thoughts-img-container {
+    margin-left: 8.33333%;
 }
 
 .students-thoughts-img-container img {
@@ -448,8 +452,8 @@ header div a {
 
 .quote {
     position: absolute;
-    top: -30px;
-    left: -15px;
+    bottom: 93px;
+    right: 499px;
 }
 
 .students-thoughts-nav-buttons {
@@ -526,7 +530,7 @@ header div a {
 
 .join-us-slider-card-info {
     max-width: 585px;
-    left: -18px;
+    right: 18px;
     bottom: 15%;
     padding: 40px 32px;
     height: 100%;
@@ -557,7 +561,7 @@ header div a {
     content: "";
     position: absolute;
     left: 0px;
-    bottom: -25px;
+    top: 45px;
     width: 50px;
     height: 1px;
     background-color: #566b8d80;
@@ -588,10 +592,8 @@ header div a {
 }
 
 .students-projects-play-img-container img.absolute {
-    left: 50%;
-    margin-left: -33px;
-    top: 50%;
-    margin-top: -99px;
+    left: 45%;
+    top: 33%;
 }
 
 .students-projects-nav-buttons button {
@@ -674,17 +676,14 @@ header div a {
 .special .letter {
     width: 435px;
 
-    top: -190px;
-    left: -220px;
+    right: calc(100% - 205px);
+    bottom: 610px;
 
     overflow: hidden;
-
-    z-index: -1;
 }
 
 .special .letter img {
-    width: 100%;
-    height: 100%;
+    width: 436px;
 }
 
 .know-us .flex {
@@ -766,8 +765,8 @@ header div a {
     position: absolute;
     color: white;
     bottom: 0.25rem;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 50%;
+    transform: translateX(50%);
 }
 
 .instagram-feed-item div.relative img {
@@ -832,8 +831,8 @@ header div a {
 
 .newsletter-send-wrapper {
     right: 13px;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: 50%;
+    transform: translateY(50%);
 }
 
 .newsletter-send-wrapper button {
