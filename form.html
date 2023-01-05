@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="sk-SK">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style/form.css">
+    <title>Formuláre - Openlab.sk</title>
+</head>
+
+<body>
+    <div id="registration" class="container py-5">
+        <div class="flex h-center py-4">
+            <h4 class="text-white text-center fw-medium">Registračný formulár</h4>
+        </div>
+        <div class="form-container py-3 px-5">
+            <form action="register">
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <label for="name">Meno</label>
+                    </div>
+                    <div class="flex v-center">
+                        <input class="mr-4 w-100" type="text" name="Name" id="first-name" placeholder="Meno" required>
+                        <input class="ml-4 w-100" type="text" name="Surname" id="last-name" placeholder="Priezvisko" required>
+                    </div>
+                </div>
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <label for="name">E-Mail</label>
+                    </div>
+                    <div class="flex v-center">
+                        <input class="w-100" type="email" name="E-Mail" id="email" placeholder="E-Mail" required>
+                    </div>
+                </div>
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <label for="name">Tel. č.</label>
+                    </div>
+                    <div class="flex v-center">
+                        <label id="area-code" for="phone-code">+</label>
+                        <input class="mr-4 w-25" type="number" name="phone-code" id="phone-code" placeholder="Predvoľba" min="1" max="500" required>
+                        <input class="ml-4 w-75" type="tel" name="phone-number" id="phone-number" placeholder="Telefónne číslo" required>
+                    </div>
+                </div>
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <label for="password">Heslo</label>
+                    </div>
+                    <div class="flex v-center">
+                        <input class="w-100" type="password" name="password" id="password" placeholder="Heslo" minlength="8" autocomplete="new-password" required>
+                    </div>
+                </div>
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <label for="fav-color">Farba trávy</label>
+                    </div>
+                    <div class="flex v-center">
+                        <input class="w-50" type="color" name="fav-color" id="fav-color" value="#1BD027">
+                    </div>
+                </div>
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <label for="SR-birthday">Dátum vzniku SR</label>
+                    </div>
+                    <div class="flex v-center">
+                        <input class="w-50" type="date" name="SR-birthday" id="SR-birthday" min="1423-07-01" max="2100-12-31" required>
+                    </div>
+                </div>
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <label for="birthday">Dátum a čas narodenia</label>
+                    </div>
+                    <div class="flex v-center">
+                        <input class="w-50" type="datetime-local" name="birthday" id="birthday">
+                    </div>
+                </div>
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <label for="camp-month">Termeň júnový, júlový</label>
+                    </div>
+                    <div class="flex v-center">
+                        <input class="w-50" type="month" name="camp-month" id="camp-month" min="2023-06" max="2023-07" pattern="[0-9]{4}-[0-9]{2}">
+                    </div>
+                </div>
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <label for="profile-picture">Profilová fotka</label>
+                    </div>
+                    <div class="flex v-center">
+                        <input class="w-50" type="file" name="profile-picture" id="profile-picture" accept="image/jpeg, image/png" capture>
+                    </div>
+                </div>
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <label for="secret-input">?!</label>
+                    </div>
+                    <div class="flex v-center">
+                        <input class="w-50" type="hidden" name="secret" id="secret-input">
+                    </div>
+                </div>
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <label for="gender-male">Pohlavie</label>
+                    </div>
+                    <div class="flex">
+                        <div>
+                            <label for="gender-male">Muž</label>
+                            <input class="ml-2" type="radio" name="gender" id="gender-male" value="male" required>
+                        </div>
+                        <div>
+                            <label for="gender-female">Žena</label>
+                            <input class="ml-2" type="radio" name="gender" id="gender-female" value="female" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <label for="tread-depth">Minimálna hĺbka dezénu v mm</label>
+                    </div>
+                    <div class="flex v-center">
+                        <label class="w-25" for="tread-depth">Hodnota: <output id="tread-depth-value"></output></label>
+                        <input class="w-75" type="range" name="tread-depth" id="tread-depth" min="0" max="5" step="0.1">
+                    </div>
+                </div>
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <label for="search-field">Vyhľadaj, čo chceš</label>
+                    </div>
+                    <div class="flex v-center">
+                        <input type="search" name="los-searchos" id="search-field" placeholder="Tu ťukaj">
+                    </div>
+                </div>
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <label for="fav-time">Obľúbený čas</label>
+                    </div>
+                    <div class="flex v-center">
+                        <input type="time" name="fav-time" id="fav-time" value="03:14">
+                    </div>
+                </div>
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <label for="fav-YT-video">Obľúbené YouTube video</label>
+                    </div>
+                    <div class="flex v-center">
+                        <input class="w-100" type="url" name="fav-YT-video" id="fav-YT-video" value="https://www.youtube.com/watch?v=dQw4w9WgXcQ" readonly>
+                    </div>
+                </div>
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <label for="actual-week">Aktuálny týždeň</label>
+                    </div>
+                    <div class="flex v-center">
+                        <input class="w-50" type="week" name="actual-week" id="actual-week" value="2001-W30">
+                    </div>
+                </div>
+
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <input class="mr-2" type="checkbox" name="Terms and Conditions" id="terms-and-conditions">
+                        <label class="fs-7" for="terms-and-conditions">Súhlasím so spracovaním osobných údajov.</label>
+                    </div>
+                </div>
+                <div class="flex row mb-4">
+                    <div class="flex v-center">
+                        <input class="px-3 mr-4" type="submit" name="submit" id="submit-btn" value="Odoslať">
+                        <input class="px-3 mr-4" type="button" name="disabled" id="disabled-btn" value="Blokovaný" disabled>
+                        <input class="px-3 mr-4" type="button" name="special" id="secret-btn" value="Špeciálny" accesskey="f">
+                        <input class="mr-4" type="image" id="image-btn" height="32" alt="OpenLab" src="./images/openlab-logo.svg">
+                        <input class="px-3" type="reset" name="reset" id="reset">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>    
+</body>
+
+<script>
+    const value = document.querySelector("#tread-depth-value")
+    const input = document.querySelector("#tread-depth")
+    value.textContent = input.value
+    input.addEventListener("input", (event) => {
+        value.textContent = event.target.value
+    })
+</script>
+
+</html>

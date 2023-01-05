@@ -1,0 +1,161 @@
+@import url('./a-spacing.css');
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+.container {
+    width: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.flex-equal {
+    flex: 1 1 0px;
+    width: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.h-center {
+    justify-content: center;
+}
+
+.h-end {
+    justify-content: flex-end;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.v-center {
+    /* align-content: center; */
+    align-items: center;
+}
+
+.v-end {
+    align-items: flex-end;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-primary {
+    color: #3597ff;
+}
+
+.text-white {
+    color: #FFFFFF;
+}
+
+.text-gray {
+    color: #566b8d;
+}
+
+.fs-6 {
+    font-size: 1.125rem;
+}
+
+.fs-7 {
+    font-size: 0.875rem;
+}
+
+.fw-light {
+    font-weight: 300;
+}
+
+.fw-medium {
+    font-weight: 500;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.lh-1 {
+    line-height: 1;
+}
+
+.z-1 {
+    z-index: 1;
+}
+
+.z-2 {
+    z-index: 2;
+}

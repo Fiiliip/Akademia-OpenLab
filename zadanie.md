@@ -26,9 +26,9 @@ Info k fungovaniu akademie:
     - ak si beries dovolenku, nemusis pisat statusy, len nas informuj, ze od kedy do kedy budes mat dovolenku / nebudes dostupny
     - po commitnuti ti spravime na kod feedback
 
-Zadanie 2 (neoficiálne pre mňa):
-[] 1. nastyluj stranku, aby sa co najviac podobala originalu
-[] 2. prepis css, kt. si mal v html subore do separatneho css filu
-[] 3. sprav registracny formular v separatnom html subore, precvic si v nom vsetky input typy kt. existuju... sprav preklik z index.html na tuto stranku
-[] 4. vytvor globalny css subor s globalnym css (vseobacne nastavenie stylov pre elementy)
-[] 5. oddel css ktore patri pre stranku form.html so separatneho css suboru
+Zadanie 2:
+[X] 1. nastyluj stranku, aby sa co najviac podobala originalu
+[X] 2. prepis css, kt. si mal v html subore do separatneho css filu
+[X] 3. sprav registracny formular v separatnom html subore, precvic si v nom vsetky input typy kt. existuju... sprav preklik z index.html na tuto stranku
+[X] 4. vytvor globalny css subor s globalnym css (vseobacne nastavenie stylov pre elementy)
+[X] 5. oddel css ktore patri pre stranku form.html do separatneho css suboru

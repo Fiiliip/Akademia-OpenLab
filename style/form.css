@@ -1,0 +1,110 @@
+@import url(./global.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'SF Pro Display', sans-serif;
+    letter-spacing: 1px;
+
+    -ms-overflow-style: none;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-25 {
+    width: 25%;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+html {
+    height: 100%;
+    background: linear-gradient(90deg, #FFFFFF 0%, #3597ff 100%);
+}
+
+#registration {
+    max-width: 720px;
+    border: 1px;
+    border-radius: 20px;
+}
+
+#registration>div:first-of-type {
+    background-color: black;
+    border-radius: 10px 10px 0 0;
+}
+
+#registration h4 {
+    text-transform: uppercase;
+}
+
+.form-container {
+    background-color: #FFFFFF;
+    border-radius: 0 0 10px 10px;
+}
+
+.row div:first-of-type {
+    margin-right: 1rem;
+    width: 20%;
+}
+
+.row div:last-of-type {
+    width: 80%;
+}
+
+input {
+    padding: 7px;
+
+    background-color: #E6E6E6;
+
+    border: none;
+    border-radius: 3px;
+}
+
+#area-code {
+    padding: 6px 6px 6px 0;
+}
+
+input[type="color"] {
+    padding: 2px;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+
+    color: #FFFFFF;
+    background-color: #3597ff;   
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+
+    color: #FFFFFF;
+    background-color: #3597ff;
+}
+
+#reset {
+    color: white;
+    background-color: red;
+}
+
+input:required {
+    border: 1px solid #3597ff;
+}
