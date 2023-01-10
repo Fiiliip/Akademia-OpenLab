@@ -32,3 +32,7 @@ Zadanie 2:
 [X] 3. sprav registracny formular v separatnom html subore, precvic si v nom vsetky input typy kt. existuju... sprav preklik z index.html na tuto stranku
 [X] 4. vytvor globalny css subor s globalnym css (vseobacne nastavenie stylov pre elementy)
 [X] 5. oddel css ktore patri pre stranku form.html do separatneho css suboru
+
+Zadanie 3:
+Nova openlab stranka
+[] 1. sprav znova openlab.sk stranku s tym, ze tento krat pouzijes bootstrap
