@@ -1,0 +1,53 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+* {
+    font-family: 'SF Pro Display', sans-serif !important;
+}
+
+.relative {
+    position: relative;
+}
+
+.fs-7 {
+    font-size: 0.875rem;
+}
+
+.btn {
+    padding: 12px 20px;
+    font-size: 14px;
+}
+
+.btn-gray {
+    color: #989ca2;
+    background-color: #989ca226;
+}
+
+.navbar-collapse.show {
+    position: absolute;
+    width: 280px;
+    top: 0;
+    right: 0;
+    transition: right 0.3s, width 0s;
+}
+
+/* .navbar-collapse.collapsing {
+    height: 100%;
+    -webkit-transition: right 1.3s ease;
+    -o-transition: right 1.3s ease;
+    -moz-transition: right 1.3s ease;
+    transition: right 1.3s ease;
+    left: 100%;
+} */
+
+.navbar-collapse.collapsing {
+    transition: width 0.35s ease;
+}
+
+.navbar-collapse.collapsing {
+    height: 100%;
+    -webkit-transition: right 0.3s ease;
+    -o-transition: right 0.3s ease;
+    -moz-transition: right 0.3s ease;
+    transition: right 0.3s ease;
+    right: -100%;
+}
