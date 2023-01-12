@@ -15,6 +15,11 @@
     justify-self: start;
 }
 
+.px-7r {
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+
 .fs-7 {
     font-size: 0.875rem;
 }
@@ -106,6 +111,7 @@ nav button.btn-primary, nav button.btn:hover.btn-primary {
 }
 
 #mainVisual .img-wrapper {
+    width: auto;
     height: 100%;
     object-fit: cover;
 }
@@ -127,15 +133,12 @@ nav button.btn-primary, nav button.btn:hover.btn-primary {
     }
 }
 
-
 #mainVisual .letter {
-    max-width: 482px;
-    width: 50%;
-    transform: translate(50%, 50%);
+    width: 241px;
+    transform: translate(0%, 50%);
 }
     
 #mainVisual .letter img {
-    max-width: 100%;
-    width: 100%;
+    width: 482px;
     object-fit: contain;
 }
