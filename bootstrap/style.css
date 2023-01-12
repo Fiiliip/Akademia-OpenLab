@@ -5,6 +5,10 @@
     letter-spacing: 1px;
 }
 
+* ::-webkit-scrollbar {
+    display: none;
+}
+
 /* ZAČIATOK VŠEOBECNÉ */
 
 .relative {
@@ -34,6 +38,28 @@ button:not(:disabled), [role="button"]:not(:disabled), [type="button"]:not(:disa
 [role="button"], [type="button"], [role="button"]:not(:disabled):focus, [type="button"]:not(:disabled):focus {
     border: none;
     box-shadow: none;
+}
+
+header {
+    height: 50px;
+    font-size: 13px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.discord-wrapper {
+    font-size: 14px;
+}
+
+@media (min-width: 1200px) {
+    .discord-wrapper {
+        padding: 6px 10px;
+        font-size: 12px;
+        border: 1px solid #989ca226;
+    }
+}
+
+.discord-wrapper a.btn:hover {
+    background-color: #F0F0F1;
 }
 
 nav {
@@ -66,12 +92,4 @@ nav .dropdown:hover ul {
 
 nav button.btn-primary, nav button.btn:hover.btn-primary {
     background-color: #3597FF;
-}
-
-.discord p {
-    font-size: 14px;
-}
-
-.discord a.btn:hover {
-    background-color: #F0F0F1;
 }
