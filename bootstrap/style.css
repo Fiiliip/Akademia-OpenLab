@@ -11,8 +11,8 @@
 
 /* ZAČIATOK VŠEOBECNÉ */
 
-.relative {
-    position: relative;
+.justify-self-start {
+    justify-self: start;
 }
 
 .fs-7 {
@@ -28,6 +28,11 @@
     color: #989ca2;
     background-color: #989ca226;
 }
+
+.bg-primary {
+    background-color: #3597FF !important;
+}
+
 
 /* KONIEC VŠEOBECNÉ */
 
@@ -92,4 +97,45 @@ nav .dropdown:hover ul {
 
 nav button.btn-primary, nav button.btn:hover.btn-primary {
     background-color: #3597FF;
+}
+
+@media (max-width: 768px) {
+    #mainVisual {
+        min-height: 430px;
+    }
+}
+
+#mainVisual .img-wrapper {
+    height: 100%;
+    object-fit: cover;
+}
+
+#mainVisual .img-wrapper img {
+    max-width: 100%;
+    max-height: 90%;
+}
+
+#mainVisual div>img.img-fluid {
+    max-height: 87%;
+    max-width: 87%;
+}
+
+@media (max-width: 992px) {
+    #mainVisual div>img.img-fluid {
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+
+
+#mainVisual .letter {
+    max-width: 482px;
+    width: 50%;
+    transform: translate(50%, 50%);
+}
+    
+#mainVisual .letter img {
+    max-width: 100%;
+    width: 100%;
+    object-fit: contain;
 }
