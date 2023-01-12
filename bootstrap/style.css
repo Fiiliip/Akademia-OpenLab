@@ -2,7 +2,10 @@
 
 * {
     font-family: 'SF Pro Display', sans-serif !important;
+    letter-spacing: 1px;
 }
+
+/* ZAČIATOK VŠEOBECNÉ */
 
 .relative {
     position: relative;
@@ -22,32 +25,53 @@
     background-color: #989ca226;
 }
 
-.navbar-collapse.show {
-    position: absolute;
+/* KONIEC VŠEOBECNÉ */
+
+button:not(:disabled), [role="button"]:not(:disabled), [type="button"]:not(:disabled) {
+    cursor: pointer;
+}
+
+[role="button"], [type="button"], [role="button"]:not(:disabled):focus, [type="button"]:not(:disabled):focus {
+    border: none;
+    box-shadow: none;
+}
+
+nav {
+    height: 57px;
+}
+
+@media (min-width: 1200px) {
+    nav {
+        height: 80px;
+    }
+}
+
+.nav-link, .dropdown-item {
+    font-size: 14px;
+}
+
+.nav-link:hover, .dropdown-item:hover {
+    color: #3597FF;
+    background-color: #FFFFFF;
+}
+
+nav .offcanvas.offcanvas-end {
     width: 280px;
-    top: 0;
-    right: 0;
-    transition: right 0.3s, width 0s;
 }
 
-/* .navbar-collapse.collapsing {
-    height: 100%;
-    -webkit-transition: right 1.3s ease;
-    -o-transition: right 1.3s ease;
-    -moz-transition: right 1.3s ease;
-    transition: right 1.3s ease;
-    left: 100%;
-} */
-
-.navbar-collapse.collapsing {
-    transition: width 0.35s ease;
+nav .dropdown:hover ul {
+    display: block;
+    top: 70%;
 }
 
-.navbar-collapse.collapsing {
-    height: 100%;
-    -webkit-transition: right 0.3s ease;
-    -o-transition: right 0.3s ease;
-    -moz-transition: right 0.3s ease;
-    transition: right 0.3s ease;
-    right: -100%;
+nav button.btn-primary, nav button.btn:hover.btn-primary {
+    background-color: #3597FF;
+}
+
+.discord p {
+    font-size: 14px;
+}
+
+.discord a.btn:hover {
+    background-color: #F0F0F1;
 }
