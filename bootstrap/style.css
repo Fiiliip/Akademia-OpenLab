@@ -60,16 +60,30 @@ header {
     font-size: 14px;
 }
 
-@media (min-width: 1200px) {
-    .discord-wrapper {
-        padding: 6px 10px;
-        font-size: 12px;
-        border: 1px solid #989ca226;
-    }
+.discord-wrapper div {
+    border: 1px solid #989ca226;
 }
 
-.discord-wrapper a.btn:hover {
+.discord-wrapper div:hover {
     background-color: #F0F0F1;
+    border: 1px solid #989ca226;
+}
+
+.discord-wrapper a {
+    color: #989ca2;
+    transition: 0.15s ease-in-out;
+}
+
+.discord-wrapper div:hover a {
+    color: #000;
+    transition: 0.15s ease-in-out;
+}
+
+@media (min-width: 1200px) {
+    .discord-wrapper div {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
 }
 
 nav {
