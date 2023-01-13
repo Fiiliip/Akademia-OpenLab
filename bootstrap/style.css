@@ -156,3 +156,46 @@ nav button.btn-primary, nav button.btn:hover.btn-primary {
     width: 482px;
     object-fit: contain;
 }
+
+#vision .items .item:nth-child(1) {
+    color: #5b94d7;
+    background-color: #ddecfb66;
+}
+
+#vision .items .item:nth-child(2) {
+    color: #5cc19a;
+    background-color: #9ceecc66;
+}
+
+#vision .items .item:nth-child(3) {
+    color: #dbca68;
+    background-color: #eee29c66;
+}
+
+#vision .items .item:nth-child(4) {
+    color: #b95e73;
+    background-color: #ee9c9c66;
+}
+
+#vision .items .item:nth-child(5) {
+    color: #b95e73;
+    background-color: #ee9c9c66;
+}
+
+#vision .items .item p:nth-child(1) {
+    font-size: 90px;
+}
+
+#vision .items .item p:nth-child(2) {
+    font-size: 18px;
+}
+
+@media (max-width: 768px) {
+    #vision .items .item p:nth-child(1) {
+        font-size: 50px;
+    }
+    
+    #vision .items .item p:nth-child(2) {
+        font-size: 14px;
+    }
+}
