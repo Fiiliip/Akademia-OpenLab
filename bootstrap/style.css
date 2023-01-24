@@ -24,6 +24,10 @@
     font-size: 0.875rem;
 }
 
+.text-red {
+    color: red;
+}
+
 .btn {
     padding: 12px 20px;
     font-size: 14px;
@@ -204,7 +208,6 @@ nav button.btn-primary, nav button.btn:hover.btn-primary {
     border-radius: 6px;
     transition: 0.3s;
     box-shadow: 0px 1px 20px #63769526;
-    cursor: pointer;
 }
 
 #labs .card img {
@@ -221,4 +224,37 @@ nav button.btn-primary, nav button.btn:hover.btn-primary {
 
 #labs .card:hover img:last-of-type {
     display: block;
+}
+
+#schools .notice img {
+    height: 15px;
+}
+
+#schools .notice-text-container {
+    display: none;
+
+    margin-bottom: 35px;
+    padding: 15px;
+    bottom: 0;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+    box-shadow: 0px 1px 20px #63769526;
+}
+
+#schools .notice:hover + .notice-text-container {
+    display: block;
+}
+
+#schools .letter {
+    /* width: 241px; šírka z písmena O*/
+    width: 213px;
+    transform: translate(0%, 49%);
+}
+    
+#schools .letter img {
+    /* width: 482px; šírka z písmena O */
+    width: 436px;
+    object-fit: contain;
 }
