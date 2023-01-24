@@ -199,3 +199,26 @@ nav button.btn-primary, nav button.btn:hover.btn-primary {
         font-size: 14px;
     }
 }
+
+#labs .card:hover {
+    border-radius: 6px;
+    transition: 0.3s;
+    box-shadow: 0px 1px 20px #63769526;
+    cursor: pointer;
+}
+
+#labs .card img {
+    bottom: 30px;
+}
+
+#labs .card img:last-of-type {
+    display: none;
+}
+
+#labs .card:hover img:first-of-type {
+    display: none;
+}
+
+#labs .card:hover img:last-of-type {
+    display: block;
+}
