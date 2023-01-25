@@ -258,3 +258,45 @@ nav button.btn-primary, nav button.btn:hover.btn-primary {
     width: 436px;
     object-fit: contain;
 }
+
+#students-thoughts {
+    background-color: #f3f9ff;
+}
+
+#students-thoughts .quote {
+    /* top: 20px;
+    right: 250px; */
+    transform: translate(5%, 30%);
+}
+
+#students-thoughts .students-thoughts-nav-buttons {
+    bottom: 50px;
+    /* transform: translateX(50%); */
+}
+
+#students-thoughts .students-thoughts-nav-buttons button {
+    width: 33px;
+    height: 33px;
+
+    border: 0px;
+
+    cursor: pointer;
+}
+
+#students-thoughts .students-thoughts-nav-buttons button:first-of-type {
+    background: url(../assets/images/arrow-slide-left.svg) no-repeat center center;
+    transition: 0.3s ease-in-out;
+}
+
+#students-thoughts .students-thoughts-nav-buttons button:hover {
+    background: url(../assets/images/arrow-slide-left-active.svg) no-repeat center center;
+}
+
+#students-thoughts .students-thoughts-nav-buttons button:last-of-type {
+    background: url(../assets/images/arrow-slide-right.svg) no-repeat center center;
+    transition: 0.3s ease-in-out;
+}
+
+#students-thoughts .students-thoughts-nav-buttons button:last-of-type:hover {
+    background: url(../assets/images/arrow-slide-right-active.svg) no-repeat center center;
+}
