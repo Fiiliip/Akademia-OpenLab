@@ -42,8 +42,32 @@
     background-color: #3597FF !important;
 }
 
-
 /* KONIEC VŠEOBECNÉ */
+
+.nav-buttons button {
+    width: 33px;
+    height: 33px;
+
+    cursor: pointer;
+}
+
+.nav-buttons button:first-of-type {
+    background: url(../assets/images/arrow-slide-left.svg) no-repeat center center;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-buttons button:hover {
+    background: url(../assets/images/arrow-slide-left-active.svg) no-repeat center center;
+}
+
+.nav-buttons button:last-of-type {
+    background: url(../assets/images/arrow-slide-right.svg) no-repeat center center;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-buttons button:last-of-type:hover {
+    background: url(../assets/images/arrow-slide-right-active.svg) no-repeat center center;
+}
 
 button:not(:disabled), [role="button"]:not(:disabled), [type="button"]:not(:disabled) {
     cursor: pointer;
@@ -269,36 +293,9 @@ nav button.btn-primary, nav button.btn:hover.btn-primary {
     transform: translate(5%, 30%);
 }
 
-#students-thoughts .students-thoughts-nav-buttons {
+#students-thoughts .nav-buttons {
     bottom: 50px;
     /* transform: translateX(50%); */
-}
-
-#students-thoughts .students-thoughts-nav-buttons button {
-    width: 33px;
-    height: 33px;
-
-    border: 0px;
-
-    cursor: pointer;
-}
-
-#students-thoughts .students-thoughts-nav-buttons button:first-of-type {
-    background: url(../assets/images/arrow-slide-left.svg) no-repeat center center;
-    transition: 0.3s ease-in-out;
-}
-
-#students-thoughts .students-thoughts-nav-buttons button:hover {
-    background: url(../assets/images/arrow-slide-left-active.svg) no-repeat center center;
-}
-
-#students-thoughts .students-thoughts-nav-buttons button:last-of-type {
-    background: url(../assets/images/arrow-slide-right.svg) no-repeat center center;
-    transition: 0.3s ease-in-out;
-}
-
-#students-thoughts .students-thoughts-nav-buttons button:last-of-type:hover {
-    background: url(../assets/images/arrow-slide-right-active.svg) no-repeat center center;
 }
 
 #join-us .card {
@@ -354,4 +351,65 @@ nav button.btn-primary, nav button.btn:hover.btn-primary {
 
 #join-us .card:hover img:last-of-type {
     display: block;
+}
+
+#students-projects>div.container {
+    border-bottom: 1px solid #d7eaff;
+}
+
+#students-projects h5::after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: 45px;
+    width: 50px;
+    height: 1px;
+    background-color: #566b8d80;
+}
+
+#students-projects .img-fluid {
+    max-height: 100%;
+
+    height: 350px;
+    width: 100%;
+    
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    #students-projects .img-fluid {
+        max-height: 100%;
+    
+        height: 200px;
+        width: 100%;
+        
+        object-fit: cover;
+    }
+}
+
+#students-projects .play-btn {
+    transform: translate(-50%, -50%);
+}
+
+.slide-circle-button {
+    width: 9px;
+    height: 9px;
+
+    background: none;
+    background-color: #3597ff33;
+
+    transition: 0.3s ease-in-out;
+}
+
+.slide-circle-button:hover {
+    background-color: #3597ff;
+}
+
+.slide-circle-button:active {
+    background-color: #3597ff;
+}
+
+/* TODO: Odstráň tento štýl. Je to len na testovanie, resp. na preview. */
+.slide-circle-button:first-of-type {
+    background-color: #3597ff;
 }
