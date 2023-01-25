@@ -300,3 +300,58 @@ nav button.btn-primary, nav button.btn:hover.btn-primary {
 #students-thoughts .students-thoughts-nav-buttons button:last-of-type:hover {
     background: url(../assets/images/arrow-slide-right-active.svg) no-repeat center center;
 }
+
+#join-us .card {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 308px;
+
+    /* flex: 1 0 308px; */
+}
+
+@media (max-width: 1400px) {
+    #join-us .card {
+        flex: 1 0 306px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #join-us .card {
+        flex: 1 0 218px;
+    }
+}
+
+@media (max-width: 992px) {
+    #join-us .card {
+        flex: 1 0 268px;
+    }
+}
+
+@media (max-width: 768px) {
+    #join-us .card {
+        flex: 1 0 238px;
+    }
+}
+
+#join-us .card:hover {
+    border-radius: 6px;
+    transition: 0.3s;
+    box-shadow: 0px 1px 20px #63769526;
+    cursor: pointer;
+}
+
+#join-us .card img {
+    bottom: 30px;
+}
+
+#join-us .card:hover img:first-of-type {
+    display: none;
+}
+
+#join-us .card img:last-of-type {
+    display: none;
+}
+
+#join-us .card:hover img:last-of-type {
+    display: block;
+}
