@@ -413,3 +413,18 @@ nav button.btn-primary, nav button.btn:hover.btn-primary {
 .slide-circle-button:first-of-type {
     background-color: #3597ff;
 }
+
+#special>div.container {
+    border-bottom: 1px solid #d7eaff;
+}
+
+#special .letter {
+    width: 435px;
+
+    right: calc(100% - 205px);
+    bottom: 515px;
+}
+
+#special .letter img {
+    width: 436px;
+}
