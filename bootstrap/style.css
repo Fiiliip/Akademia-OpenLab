@@ -428,3 +428,16 @@ nav button.btn-primary, nav button.btn:hover.btn-primary {
 #special .letter img {
     width: 436px;
 }
+
+/* #students-projects .img-fluid {
+    width: 100%;
+    
+} */
+
+.know-us-img-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+
+    border-radius: 3px;
+}
