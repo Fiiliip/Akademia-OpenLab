@@ -428,3 +428,31 @@ nav button.btn-primary, nav button.btn:hover.btn-primary {
 #special .letter img {
     width: 436px;
 }
+
+#instagram-feed .item div {
+    display: none;
+}
+
+#instagram-feed .item a:hover ~ div {
+    display: block;
+}
+
+#instagram-feed .item a:hover {
+    filter: brightness(50%);
+}
+
+#instagram-feed .item div.position-relative p {
+    bottom: 0.25rem;
+    transform: translateX(50%);
+}
+
+#instagram-feed .item div.position-relative img {
+    bottom: 0.3rem;
+    right: 1%;
+    fill: #FFFFFF; /* TODO: Vyriešiť, prečo sa mi nemení farba. */
+}
+
+#instagram-feed .item {
+    min-height: 165px;
+    min-width: 165px;
+}
