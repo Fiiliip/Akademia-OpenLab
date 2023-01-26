@@ -518,7 +518,7 @@ footer * {
 }
 
 footer a:hover {
-    color: #0a58ca;
+    color: #0a58ca !important;
 }
 
 footer .social-media-wrapper img {
