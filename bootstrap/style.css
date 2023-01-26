@@ -498,3 +498,20 @@ nav button.btn-primary, nav button.btn:hover.btn-primary {
 
     margin-top: 2px;
 }
+
+footer * {
+    font-size: 13px;
+}
+
+footer a:hover {
+    color: #0a58ca;
+}
+
+footer .social-media-wrapper img {
+    max-height: 20px;
+}
+
+footer .container>img {
+    left: 100%;
+    top: calc(100% - 20px);
+}
