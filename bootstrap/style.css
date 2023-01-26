@@ -257,6 +257,8 @@ nav button.btn-primary, nav button.btn:hover.btn-primary {
 #schools .notice-text-container {
     display: none;
 
+    width: 600px;
+
     margin-bottom: 35px;
     padding: 15px;
     bottom: 0;
@@ -265,6 +267,18 @@ nav button.btn-primary, nav button.btn:hover.btn-primary {
 
     transition: 0.3s;
     box-shadow: 0px 1px 20px #63769526;
+}
+
+@media (max-width: 768px) {
+    #schools .notice-text-container {
+        width: unset;
+    }
+}
+
+@media (max-width: 992px) {
+    #schools .notice-text-container {
+        right: 0;
+    }
 }
 
 #schools .notice:hover + .notice-text-container {
