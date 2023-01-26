@@ -597,7 +597,38 @@
             </div>
         </section>
 
+        <section id="newsletter" class="py-5">
+            <div class="container py-5">
+                <div class="row rounded-2 py-5 px-md-4 px-xl-5 align-items-center">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <h4 class="fw-light fs-5">Prihláste sa do nášho newslettra a budete mať<br><span class="fw-bold">čerstvé informácie o živote v OpenLabe.</span></h4>
+                    </div>
+                    <div class="position-relative col-md-6">
+                        <input class="w-100 border-0 rounded-2 py-2 pe-5 ps-3 fs-7" type="email" placeholder="Sem napíšte svoj e-mail">
+                        <div class="send-wrapper position-absolute d-flex align-items-center bottom-50">
+                            <button id="send-button" class="d-flex align-items-center border-0 bg-white">
+                                <img class="px-2 py-1" src="../assets/images/send.svg" alt="Odoslať.">
+                            </button>
+                            <div id="spinning-circle" class="d-none spinning-big-circle d-flex justify-content-center rounded-circle bg-black">
+                                <div class="spinning-small-circle bg-white rounded-circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </article>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
+
+<script>
+    document.getElementById('send-button').addEventListener('click', function() {
+        document.getElementById('send-button').classList.add('d-none');
+        document.getElementById('spinning-circle').classList.remove('d-none');
+        setTimeout(function() {
+            document.getElementById('spinning-circle').classList.add('d-none');
+            document.getElementById('send-button').classList.remove('d-none');
+        }, 2000);
+    });
+</script>

@@ -456,3 +456,45 @@ nav button.btn-primary, nav button.btn:hover.btn-primary {
     min-height: 165px;
     min-width: 165px;
 }
+
+#newsletter>.container>.row {
+    background-color: #d7eaff;
+}
+
+#newsletter input {
+    height: 40px;
+}
+
+#newsletter input:focus {
+    outline: none;
+}
+
+#newsletter input:invalid {
+    border: 1px solid red;
+}
+
+#newsletter .send-wrapper {
+    right: 13px;
+    transform: translateY(50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#newsletter .spinning-big-circle {
+    width: 24px;
+    height: 24px;
+
+    margin-right: 13px;
+
+    animation: spin 1s linear infinite;
+}
+
+#newsletter .spinning-small-circle {
+    width: 6px;
+    height: 6px;
+
+    margin-top: 2px;
+}
