@@ -36,7 +36,10 @@ export class Hra {
         this.zapisDoHistore(`Kolo č. ${this.pocitadloKol}`);
     
         this.vypytajVolbuOdHraca(this.hrac);
+
+        this.vypisHodnotyNaObrazovku();
         if (this.hrac.zvolenyPredmet == undefined) return;
+        
         this.vypytajVolbuOdHraca(this.ai);
     
         this.vyhodnot();
