@@ -24,15 +24,17 @@ export class Hra {
 
     noveKolo() {
         this.pocitadloKol += 1;
+        
+        this.zapisDoHistore("--------------------");
         this.zapisDoHistore(`Kolo č. ${this.pocitadloKol}`);
     
         this.vypytajVolbuOdHraca(this.hrac);
+        if (this.hrac.zvolenyPredmet == undefined) return;
         this.vypytajVolbuOdHraca(this.ai);
     
         this.vyhodnot();
         this.vypisHodnotyNaObrazovku();
 
-        this.zapisDoHistore("--------------------");
         document.getElementById("startGameBtn").innerHTML = "Hrať znovu.";
     }
     
@@ -47,7 +49,7 @@ export class Hra {
             if (hrac.zvolenyPredmet == undefined) {
                 window.alert("Neplatná voľba. Skús znova.");
                 this.zapisDoHistore(`${hrac.meno} zadal/-a neplatnú voľbu.`);
-                this.vypytajVolbuOdHraca(hrac);
+                return;
             }
         }
         this.pocitadloObjektov.set(hrac.zvolenyPredmet, this.pocitadloObjektov.get(hrac.zvolenyPredmet) + 1);
