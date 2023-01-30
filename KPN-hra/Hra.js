@@ -20,9 +20,16 @@ export class Hra {
         ]);
     
         this.historia = [];
+
+        this.uzBolaSpustena = false;
     };
 
     noveKolo() {
+        if (!this.uzBolaSpustena) {
+            this.zobrazPravidla();
+            this.uzBolaSpustena = true;
+        }
+
         this.pocitadloKol += 1;
         
         this.zapisDoHistore("--------------------");
@@ -73,6 +80,10 @@ export class Hra {
         }
     
         this.zapisDoHistore(`Výsledok: ${vysledok}`);
+    }
+
+    zobrazPravidla() {
+        window.alert("Vitaj v hre Kameň, Papier, Nožnice.\n\nPravidlá hry:\n- Kameň otupí nožnice. | Vyhrá kameň.\n- Papier obalí kameň. | Vyhrá papier.\n- Nožnice rozstrihnú papier. | Vyhrajú nožnice.\n- Dva rovnaké objekty znamenajú remízu.\n\nKlikni \"OK\" pre pokračovanie (vyskočí ti okno, kde zadáš tvoju voľbu).");
     }
     
     zapisDoHistore(text) {
