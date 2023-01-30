@@ -73,3 +73,9 @@ function zapisLog(text) {
     historiaHry.push(text)
     console.log(text);
 }
+
+// const htmlSkoreHraca = document.getElementById("score-player");
+// const htmlSkoreAI = document.getElementById("score-ai");
+
+// htmlSkoreHraca.innerHTML = "Skóre hráča: " + skoreHraca;
+// htmlSkoreAI.innerHTML = "Skóre AI: " + skoreAI;
