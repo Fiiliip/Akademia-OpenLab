@@ -1,40 +1,40 @@
-import { Hra } from './Hra.js';
+import { Game } from './Game.js';
 
-const hra = new Hra();
+const game = new Game();
 
 // FIX: Prečo toto nefunguje?
 // function spustHru() {
 //     // Zobraz uvítací text.
-//     window.alert("Vitaj v hre Kameň, Papier, Nožnice.\n\nPravidlá hry:\n- Kameň otupí nožnice. | Vyhrá kameň.\n- Papier obalí kameň. | Vyhrá papier.\n- Nožnice rozstrihnú papier. | Vyhrajú nožnice.\n- Dva rovnaké objekty znamenajú remízu.\n\nKlikni \"OK\" pre pokračovanie (vyskočí ti okno, kde zadáš tvoju voľbu).");
+//     alert("Vitaj v hre Kameň, Papier, Nožnice.\n\nPravidlá hry:\n- Kameň otupí nožnice. | Vyhrá kameň.\n- Papier obalí kameň. | Vyhrá papier.\n- Nožnice rozstrihnú papier. | Vyhrajú nožnice.\n- Dva rovnaké objekty znamenajú remízu.\n\nKlikni \"OK\" pre pokračovanie (vyskočí ti okno, kde zadáš tvoju voľbu).");
     
 //     hra.noveKolo();
 // }
 
 document.getElementById('startGameBtn').addEventListener('click', function() {
-    hra.noveKolo();
+    game.newRound();
 });
 
 // Malý "Easter Egg", aj keď ho tu v kóde takmer každý uvidí, heh.
-let nadpisFS = 2.6;
+let headerFS = 2.6;
 let textFS = 0.6;
 
 document.getElementById('showRulesBtn').addEventListener('click', function() {
     let pElementy = document.getElementById('gameRules').children;
     
-    nadpisFS += 0.4;
+    headerFS += 0.4;
     textFS += 0.4;
 
-    if (nadpisFS > 1000) {
+    if (headerFS > 1000) {
         alert('No bolo ti to treba?');
-        nadpisFS = 18;
+        headerFS = 18;
         textFS = 16;
-    } else if (nadpisFS > 30) {
+    } else if (headerFS > 30) {
         alert('Nerob si srandu, že na to stále nevidíš! Na, urobím ti láskavosť.');
-        nadpisFS += 1000;
+        headerFS += 1000;
         textFS += 1000;
     }
 
-    pElementy[0].style.fontSize = `${nadpisFS}px`;
+    pElementy[0].style.fontSize = `${headerFS}px`;
     pElementy[1].style.fontSize = `${textFS}px`;
 });
 

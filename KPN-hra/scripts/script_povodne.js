@@ -35,7 +35,7 @@ let historiaHry = [];
 // Spusti hru kliknutím na tlačidlo.
 function spustHru() {
     // Zobraz pravidlá hry.
-    window.alert("Vitaj v hre Kameň, Papier, Nožnice.\n\nPravidlá hry:\n- Kameň otupí nožnice. | Vyhrá kameň.\n- Papier obalí kameň. | Vyhrá papier.\n- Nožnice rozstrihnú papier. | Vyhrajú nožnice.\n- Dva rovnaké predmety znamenajú remízu.\n\nKlikni \"OK\" pre pokračovanie (vyskočí ti okno, kde zadáš tvoju voľbu)."); 
+    alert("Vitaj v hre Kameň, Papier, Nožnice.\n\nPravidlá hry:\n- Kameň otupí nožnice. | Vyhrá kameň.\n- Papier obalí kameň. | Vyhrá papier.\n- Nožnice rozstrihnú papier. | Vyhrajú nožnice.\n- Dva rovnaké predmety znamenajú remízu.\n\nKlikni \"OK\" pre pokračovanie (vyskočí ti okno, kde zadáš tvoju voľbu)."); 
 
     zapisDoHistore(`Kolo č. ${pocitadloKol += 1}`)
 
@@ -43,7 +43,7 @@ function spustHru() {
     const volbaHraca = prompt("Zadaj svoju voľbu: k (kameň), p (papier) alebo n (nožnice).").toLowerCase();
 
     if (predmety.find(predmet => predmet.znak == volbaHraca) == undefined) {
-        window.alert("Zadaná voľba nie je platná. Skús znova.");
+        alert("Zadaná voľba nie je platná. Skús znova.");
         zapisDoHistore("Zadná neplatná voľba.\n")
         spustHru();
     }
@@ -75,7 +75,7 @@ function spustHru() {
     zapisDoHistore(`Výsledok: ${vysledok}`)
 
     // Zobraz výsledok hry.
-    window.alert(`Tvoja voľba: ${volbaHraca}\nVoľba AI: ${volbaAI}\n\nVýsledok: ${vysledok}`);
+    alert(`Tvoja voľba: ${volbaHraca}\nVoľba AI: ${volbaAI}\n\nVýsledok: ${vysledok}`);
 
     // Vypíš skóre do HTML.
     document.getElementById("score-player").innerHTML = `Skóre hráča: ${skoreHraca}`;
