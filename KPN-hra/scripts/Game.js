@@ -116,9 +116,6 @@ export class Game {
         } else if (playAgain == "n") {
             this.writeToGameLog("Hra bola ukončená.");
             alert("Hra bola ukončená.");
-
-            location.reload();
-            // Neviem, čo by to tu malo robiť ďalej.
         }
     }
 
@@ -133,7 +130,7 @@ export class Game {
             [this.gameObjects[2], 0]
         ]);
         this.gameLog = [];
-        this.writeInfoOnDisplay();
+        this.writeToGameLog("Hra bola reštartovaná.");
         this.newRound();
     }
 
