@@ -82,6 +82,7 @@ export class Hra {
             document.getElementById("html").style.borderColor = "rgb(220,53,69)";
         }
     
+        alert(vysledok);
         this.zapisDoHistore(`Výsledok: ${vysledok}`);
     }
 

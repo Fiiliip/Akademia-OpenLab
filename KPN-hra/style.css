@@ -19,4 +19,10 @@ html {
     border-bottom: none;
 }
 
+#gameRules p:nth-child(1) {
+    font-size: 0px;
+}
 
+#gameRules p:nth-child(2) {
+    font-size: 0px;
+}
