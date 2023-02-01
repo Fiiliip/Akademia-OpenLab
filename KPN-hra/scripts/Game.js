@@ -123,6 +123,9 @@ export class Game {
 
             document.getElementById("startGameBtn").disabled = true;
             document.getElementById("startGameBtn").innerHTML = "Hra ukončená.";
+        } else {
+            alert("Neplatná voľba. Skús znova.");
+            this.askToPlayAgain();
         }
     }
 
