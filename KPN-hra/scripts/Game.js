@@ -28,6 +28,10 @@ export class Game {
 
     getPlayerName() {
         this.player.name = prompt("Zadaj svoje meno: ");
+        if (this.player.name == "") {
+            alert("Neplatné meno. Skús znova.");
+            this.getPlayerName();
+        }
     }
 
     newRound() {
