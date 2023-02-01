@@ -120,6 +120,9 @@ export class Game {
         } else if (playAgain == "n") {
             this.writeToGameLog("Hra bola ukončená.");
             alert("Hra bola ukončená.");
+
+            document.getElementById("startGameBtn").disabled = true;
+            document.getElementById("startGameBtn").innerHTML = "Hra ukončená.";
         }
     }
 
