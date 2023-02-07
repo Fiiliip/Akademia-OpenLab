@@ -1,4 +1,4 @@
-import { GameObject } from "./GameObject.js";
+import { Item } from "./Item.js";
 import { Player } from "./Player.js";
 
 export class Game {
@@ -8,17 +8,17 @@ export class Game {
 
         this.winner = null;
     
-        this.gameObjects = [
-            new GameObject(1, "kameň", "k"),
-            new GameObject(2, "papier", "p"),
-            new GameObject(3, "nožnice", "n")
+        this.items = [
+            new Item(1, "kameň", "k"),
+            new Item(2, "papier", "p"),
+            new Item(3, "nožnice", "n")
         ]
     
         this.roundCounter = 0;
-        this.gameObjectUsageCounter = new Map([
-            [this.gameObjects[0], 0],
-            [this.gameObjects[1], 0],
-            [this.gameObjects[2], 0]
+        this.itemUsageCounter = new Map([
+            [this.items[0], 0],
+            [this.items[1], 0],
+            [this.items[2], 0]
         ]);
     
         this.gameLog = [];
@@ -26,18 +26,18 @@ export class Game {
         this.isRunning = false;
     };
 
-    getPlayerName() {
+    setPlayerName() {
         this.player.name = prompt("Zadaj svoje meno: ");
         if (this.player.name == "") {
             alert("Neplatné meno. Skús znova.");
-            this.getPlayerName();
+            this.setPlayerName();
         }
     }
 
     newRound() {
         if (!this.isRunning) {
             this.showRules();
-            this.getPlayerName();
+            this.setPlayerName();
             this.isRunning = true;
         }
 
@@ -47,7 +47,7 @@ export class Game {
     
         this.getPlayerChoice(this.player);
         document.getElementById("startGameBtn").innerHTML = "Hrať znovu.";
-        if (this.player.selectedGameObject == undefined) return;
+        if (this.player.selectedItem == undefined) return;
 
         this.getPlayerChoice(this.ai);
         
@@ -65,28 +65,28 @@ export class Game {
     getPlayerChoice(player) {
         let choice = null;
         if (player.name.includes("AI")) {
-            player.selectedGameObject = this.gameObjects[Math.floor(Math.random() * 3)];
+            player.selectedItem = this.items[Math.floor(Math.random() * 3)];
         } else {
             choice = prompt("Zadaj svoju voľbu: k (kameň), p (papier) alebo n (nožnice).");
-            player.selectedGameObject = this.gameObjects.find(gameObject => gameObject.char == choice.toLowerCase());
+            player.selectedItem = this.items.find(item => item.char == choice.toLowerCase());
     
-            if (player.selectedGameObject == undefined) {
+            if (player.selectedItem == undefined) {
                 alert("Neplatná voľba. Skús znova.");
                 this.writeToGameLog(`${player.name} zadal/-a neplatnú voľbu.`);
                 return;
             }
         }
-        this.gameObjectUsageCounter.set(player.selectedGameObject, this.gameObjectUsageCounter.get(player.selectedGameObject) + 1);
+        this.itemUsageCounter.set(player.selectedItem, this.itemUsageCounter.get(player.selectedItem) + 1);
     
-        this.writeToGameLog(`${player.name} zvolil/-a predmet: ${player.selectedGameObject.name}`);
+        this.writeToGameLog(`${player.name} zvolil/-a predmet: ${player.selectedItem.name}`);
     }
     
     checkRoundResults() {
         let result = null;
-        if (this.player.selectedGameObject == this.ai.selectedGameObject) {
+        if (this.player.selectedItem == this.ai.selectedItem) {
             result = "Remíza!";
             document.getElementById("html").style.borderColor = "rgb(255,193,7)";
-        } else if ((this.player.selectedGameObject.char == "k" && this.ai.selectedGameObject.char == "n") || (this.player.selectedGameObject.char == "p" && this.ai.selectedGameObject.char == "k") || (this.player.selectedGameObject.char == "n" && this.ai.selectedGameObject.char == "p")) {
+        } else if ((this.player.selectedItem.char == "k" && this.ai.selectedItem.char == "n") || (this.player.selectedItem.char == "p" && this.ai.selectedItem.char == "k") || (this.player.selectedItem.char == "n" && this.ai.selectedItem.char == "p")) {
             this.player.score += 1;
             result = `${this.player.name} vyhral/-a kolo!`;
             document.getElementById("html").style.borderColor = "rgb(25,135,84)";
@@ -134,10 +134,10 @@ export class Game {
         this.ai.score = 0;
         this.winner = null;
         this.roundCounter = 0;
-        this.gameObjectUsageCounter = new Map([
-            [this.gameObjects[0], 0],
-            [this.gameObjects[1], 0],
-            [this.gameObjects[2], 0]
+        this.itemUsageCounter = new Map([
+            [this.items[0], 0],
+            [this.items[1], 0],
+            [this.items[2], 0]
         ]);
         this.gameLog = [];
         this.writeToGameLog("Hra bola reštartovaná.");
@@ -159,9 +159,9 @@ export class Game {
         document.getElementById("scorePlayer").innerHTML = `${this.player.name}: ${this.player.score}`;
         document.getElementById("scoreAI").innerHTML = `${this.ai.name}: ${this.ai.score}`;
 
-        document.getElementById("countRock").innerHTML = `Kameň: ${this.gameObjectUsageCounter.get(this.gameObjects[0])}`;
-        document.getElementById("countPaper").innerHTML = `Papier: ${this.gameObjectUsageCounter.get(this.gameObjects[1])}`;
-        document.getElementById("countScissors").innerHTML = `Nožnice: ${this.gameObjectUsageCounter.get(this.gameObjects[2])}`;
+        document.getElementById("countRock").innerHTML = `Kameň: ${this.itemUsageCounter.get(this.items[0])}`;
+        document.getElementById("countPaper").innerHTML = `Papier: ${this.itemUsageCounter.get(this.items[1])}`;
+        document.getElementById("countScissors").innerHTML = `Nožnice: ${this.itemUsageCounter.get(this.items[2])}`;
 
         document.getElementById("historyInfo").innerHTML = this.gameLog.join("<br>");
     }
