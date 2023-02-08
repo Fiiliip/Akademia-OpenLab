@@ -1,5 +1,5 @@
 Vyrvor stranku Kamen [] papier [] noznice ( v js, vysledky zobraz cez alert)
-[] sprav zakladnu stranku, na kt. budu vysvetlene pravidla hry kamen papier noznice
+[X] sprav zakladnu stranku, na kt. budu vysvetlene pravidla hry kamen papier noznice
 [X] pridaj tlacidlo, pomocou ktoreho cez event onclick spustis hru
 [X] po spusteni hry vyskoci alert ze hra zacina a vysvetli, ze user musi zadat do promptu Kamen papier alebo noznice a nasledne user zisti ci vyhral alebo nie
 [X] po odkliknuti alertu sa zapise do premennej javascriptom vygenerovany string (K[] kamen, P[]papier...)
