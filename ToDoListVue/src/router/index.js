@@ -1,25 +1,27 @@
-import { createRouter, createWebHashHistory } from "vue-router";
-import ActiveTasks from "../views/ActiveTasks.vue";
+import { createRouter, createWebHistory } from "vue-router";
+
+// import ActiveTasks from '@/plugins/app/active-tasks/active-tasks.vue'; // Načíta na začiatku aplikácie, resp. nepoužíva lazy-loading.
 
 const routes = [
   {
+    path: "/",
+    redirect: "/active",
+  },
+  {
     path: "/active",
-    name: "ActiveTasks",
-    component: ActiveTasks,
+    name: "active-tasks",
+    // component: ActiveTasks // Keby som používal import zo začiatku tohto súboru. Nevyužíva lazy-loading.
+    component: () => import('@/plugins/app/active-tasks/active-tasks.vue'), // Route level code-splitting. This generates a separate chunk (about.[hash].js) for this route which is lazy-loaded when the route is visited.
   },
   {
     path: "/deleted",
-    name: "DeletedTasks",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/DeletedTasks.vue"),
+    name: "deleted-tasks",
+    component: () => import('@/plugins/app/deleted-tasks/deleted-tasks.vue'),
   },
 ];
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory(process.env.BASE_URL),
   routes,
 });
 
