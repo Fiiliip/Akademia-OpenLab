@@ -1,24 +1,13 @@
-# todolistvue
+# ToDoListVue
 
-## Project setup
-```
-npm install
-```
+Jednoduchá webová aplikácia na ukladanie si úloh, ktoré treba spraviť.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Návod na spustenie
 
-### Compiles and minifies for production
-```
-npm run build
-```
+1. Stiahni si projekt.
+2. V termináli sa presuň do adresára projektu.
+3. Spusti príkaz `npm install` pre nainštalovanie potrebných modulov.
+4. Spusti príkaz `npm run serve` pre spustenie servera.
+5. V prehliadači otvor stránku `http://localhost:8080/` (port sa môže líšiť).
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Pre zhotovenie aplikácie do produkcnej verzie použi príkaz `npm run build`.

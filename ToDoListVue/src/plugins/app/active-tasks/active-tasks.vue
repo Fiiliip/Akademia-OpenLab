@@ -1,12 +1,13 @@
 <template>
   <div class="tasks">
-    <TaskItem title="Kúpiť 10ks vajec"></TaskItem>  
+    <TaskItem title="Kúpiť 10ks vajec"></TaskItem>
+    <input type="text" v-model="inputText">  
+    <button @click="addTask()"></button>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import TaskItem from "@/components/TaskItem.vue";
+import TaskItem from "@/plugins/app/_components/z-task-item.vue";
 
 export default {
   name: "ActiveTasks",
@@ -16,13 +17,14 @@ export default {
 
   data() {
     return {
+      inputText: "",
       tasks: []
     }
   },
 
   methods: {
     addTask() {
-      
+      this.tasks.push()
     }
   }
 };

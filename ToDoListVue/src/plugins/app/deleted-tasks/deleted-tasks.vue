@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import TaskItem from "@/components/TaskItem.vue";
+import TaskItem from '@/plugins/app/_components/z-task-item.vue';
 
 export default {
   name: "DeletedTasks",
