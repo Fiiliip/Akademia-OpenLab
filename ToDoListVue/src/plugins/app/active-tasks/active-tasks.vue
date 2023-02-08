@@ -1,6 +1,10 @@
 <template>
-  <div class="tasks">
-    <TaskItem>NULL</TaskItem>
+  <div class="container">
+    <ul class="row justify-content-center list-group mt-3">
+      <li class="list-group-item" v-for="task in this.$store.state.tasks" :key="task.id">
+        <TaskItem v-if="!task.isDone" :task="task" @deleteTask="task.isDone = true"></TaskItem>
+      </li>
+    </ul>
   </div>
 </template>
 

@@ -1,7 +1,9 @@
 <template>
-    <div style="max-width: 350px" class="d-flex justify-content-between">
-        <p>{{ task.title }}</p>
-        <button @click="setIsDone()">Hotovo</button>
+    <div class="d-flex align-items-center" @click="$emit('deleteTask')">
+        <button class="btn me-1" >
+            <img src="../../../../public/assets/trash-can.svg" alt="Odstrániť úlohu.">
+        </button>
+        <p class="mb-0">{{ this.task.title }}</p>
     </div>
 </template>
 
@@ -9,19 +11,10 @@
 export default {
     name: "TaskItem",
     props: {
-        task: Object,
-    },
-    methods: {
-        setIsDone() {
-            this.task.isDone = true;
+        task: {
+            type: Object,
+            required: true,
         }
-    },
-    mounted() {
-        console.log(this.task);
     }
 };
 </script>
-
-<style>
-
-</style>

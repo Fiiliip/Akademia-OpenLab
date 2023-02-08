@@ -19,29 +19,29 @@ Vue1:
 [X] sprav si novy vue projekt
 [X] daj si tam input na novu todo polozku
 [X] input si hookni na click, aby pridal do zoznamu v data novy item
-[] zobraz itemy
-[] itemom pridaj deleted atribut
-[] ked je deleted, tak cez v-if sa schova
-[] sprav druhu pagu kde budu zmazane veci"
+[X] zobraz itemy
+[X] itemom pridaj deleted atribut
+[X] ked je deleted, tak cez v-if sa schova
+[X] sprav druhu pagu kde budu zmazane veci"
 
 Čo budem vedieť?
 [X] vie si spravit novy vue projekt
 [X] vie tam robit pages
-[] vie sa linkovat medzi pages
-[] vie pouzivat @click a eventy
-[] vie pouzivat v-if
+[X] vie sa linkovat medzi pages
+[X] vie pouzivat @click a eventy
+[X] vie pouzivat v-if
 [] vie pouzivat data, a vkladat ich do templatu
-[] vie pouzivat v-for"
+[X] vie pouzivat v-for"
 
 Vue2:
-[] item sprav ako komponent, do ktoreho posles cely objekt (deleted a text)
+[X] item sprav ako komponent, do ktoreho posles cely objekt (deleted a text)
 [] sprav tlacitko ktore getne z mock serveru cez axios data
 [] sprav tlacitko ktore postne na mock server cez axios data
 [] sprav loadovanie do mounted
 [] sprav savovanie po kazdej akcii v ui"
 
-[] vie robit komponenty a vkladat ich do stranok
-[] vie pouzivat parametre v komponentoch (props)
+[X] vie robit komponenty a vkladat ich do stranok
+[X] vie pouzivat parametre v komponentoch (props)
 [] vie robit axios requesty
 [] vie pouzivat mounted
 [] vie robit methods, a menit data a obsah templates"	"todo list [] advanced
