@@ -3,6 +3,7 @@ QnA:
 - Q: Aký je rozdieľ medzi "npm run serve" a "vue serve"?
 - Q: Prečo mi nefunguje "vue serve"? Že vraj "package.json" je už v projekte.
 - Q: K čomu slúži "name" v "export default" pri komponente?
+- Q: Môžem písať kód do App.vue, alebo to slúži len na router-view?
 
 Pozn.:
 - "props: {
@@ -16,8 +17,8 @@ Pozn.:
 Vue1:
 Čo spraviť?
 [X] sprav si novy vue projekt
-[] daj si tam input na novu todo polozku
-[] input si hookni na click, aby pridal do zoznamu v data novy item
+[X] daj si tam input na novu todo polozku
+[X] input si hookni na click, aby pridal do zoznamu v data novy item
 [] zobraz itemy
 [] itemom pridaj deleted atribut
 [] ked je deleted, tak cez v-if sa schova
@@ -25,7 +26,7 @@ Vue1:
 
 Čo budem vedieť?
 [X] vie si spravit novy vue projekt
-[] vie tam robit pages
+[X] vie tam robit pages
 [] vie sa linkovat medzi pages
 [] vie pouzivat @click a eventy
 [] vie pouzivat v-if
