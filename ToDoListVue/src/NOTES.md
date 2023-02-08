@@ -3,6 +3,7 @@ QnA:
 - Q: Aký je rozdieľ medzi "npm run serve" a "vue serve"?
 - Q: Prečo mi nefunguje "vue serve"? Že vraj "package.json" je už v projekte.
 - Q: K čomu slúži "name" v "export default" pri komponente?
+- Q: Môžem písať kód do App.vue, alebo to slúži len na router-view?
 
 Pozn.:
 - "props: {
