@@ -1,6 +1,8 @@
 <template>
   <div class="tasks">
-    <TaskItem>NULL</TaskItem>
+    <TaskItem title="Kúpiť 10ks vajec"></TaskItem>
+    <input type="text" v-model="inputText">  
+    <button @click="addTask()"></button>
   </div>
 </template>
 
@@ -12,5 +14,24 @@ export default {
   components: {
     TaskItem,
   },
+
+  data() {
+    return {
+      inputText: "",
+      tasks: []
+    }
+  },
+
+  methods: {
+    addTask() {
+      this.tasks.push()
+    }
+  }
 };
 </script>
+
+<style>
+.tasks {
+  border: 1px solid red;
+}
+</style>

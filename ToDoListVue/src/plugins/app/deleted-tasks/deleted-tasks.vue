@@ -1,6 +1,6 @@
 <template>
   <div class="tasks">
-    <TaskItem>NULL</TaskItem> 
+    <TaskItem title="Kúpiť 10ks vajec"></TaskItem> 
   </div>
 </template>
 
