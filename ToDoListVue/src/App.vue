@@ -5,7 +5,7 @@
       <input type="text" class="form-control" v-model="inputText" placeholder="Zadaj úlohu...">
       <button class="btn btn-outline-secondary" type="button" @click="addTask()">Pridaj úlohu</button>
     </div>
-    <div id="nav" class="d-flex justify-content-evenly border rounded-pill py-2 my-3 mx-auto">
+    <div id="nav" style="max-width: 335px" class="d-flex justify-content-evenly border rounded-pill py-2 my-3 mx-auto">
       <router-link class="text-decoration-none" to="/active">Aktívne</router-link>
       <router-link class="text-decoration-none" to="/deleted">Odstránené</router-link>
     </div>
@@ -60,11 +60,9 @@ export default {
 }
 
 #nav {
-  max-width: 335px;
-
   a {
     color: #2c3e50;
-
+    
     &.router-link-exact-active {
       color: #42b983;
     }
