@@ -1,11 +1,11 @@
 <template>
   <div class="container mt-3">
     <h1 class="text-center">ToDo List</h1>
-    <div style="max-width: 600px" class="input-group mt-3 mx-auto">
+    <div class="input-group mt-3 mx-auto">
       <input type="text" class="form-control" v-model="inputText" placeholder="Zadaj úlohu...">
       <button class="btn btn-outline-secondary" type="button" @click="addTask()">Pridaj úlohu</button>
     </div>
-    <div id="nav" style="max-width: 335px" class="d-flex justify-content-evenly border rounded-pill py-2 my-3 mx-auto">
+    <div id="nav" class="d-flex justify-content-evenly border rounded-pill py-2 my-3 mx-auto">
       <router-link class="text-decoration-none" to="/active">Aktívne</router-link>
       <router-link class="text-decoration-none" to="/deleted">Odstránené</router-link>
     </div>
@@ -59,7 +59,13 @@ export default {
     display: none;
 }
 
+.input-group {
+    max-width: 600px;
+}
+
 #nav {
+  max-width: 335px;
+
   a {
     color: #2c3e50;
     

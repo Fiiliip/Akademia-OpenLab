@@ -1,10 +1,11 @@
 <template>
   <div class="container">
-    <ul class="row justify-content-center list-group mt-3">
-      <li class="list-group-item" v-for="task in this.$store.state.tasks" :key="task.id">
+    <ul class="row justify-content-center list-group mt-3" v-if="areThereDeletedTasks">
+      <li class="list-group-item" v-for="task in this.$store.state.tasks.slice().reverse()" :key="task.id">
         <TaskItem v-if="task.isDone" :task="task" @deleteTask="deleteTask(task)"></TaskItem>
       </li>
     </ul>
+    <p class="text-center" v-else>Nie sú žiadne odstránené úlohy.</p>
   </div>
 </template>
 
@@ -21,5 +22,10 @@ export default {
       this.$store.state.tasks.splice(this.$store.state.tasks.indexOf(task), 1);
     },
   },
+  computed: {
+    areThereDeletedTasks() {
+      return this.$store.state.tasks.filter((task) => task.isDone) != 0 ? true : false;
+    },
+  }
 };
 </script>
