@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <ul class="row justify-content-center list-group mt-3" v-if="areThereActiveTasks">
-      <li class="list-group-item" v-for="task in this.$store.state.tasks.slice().reverse()" :key="task.id">
+      <li class="list-group-item" v-for="task in filteredActiveTasks.slice().reverse()" :key="task.id">
         <TaskItem v-if="!task.isDone" :task="task" @deleteTask="task.isDone = true"></TaskItem>
       </li>
     </ul>
@@ -19,9 +19,11 @@ export default {
   },
   computed: {
     areThereActiveTasks() {
-      console.log(this.$store.state.tasks.filter((task) => !task.isDone));
       return this.$store.state.tasks.filter((task) => !task.isDone) != 0 ? true : false;
     },
+    filteredActiveTasks() {
+      return this.$store.state.tasks.filter((task) => !task.isDone);
+    }
   }
 };
 </script>
