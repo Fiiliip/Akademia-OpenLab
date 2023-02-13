@@ -1,6 +1,11 @@
 <template>
   <div class="container mt-3">
     <h1 class="text-center">ToDo List</h1>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-light me-1" @click="downloadData()"><img src="../public/assets/download.svg" alt="Stiahni dáta zo serveru."></button>
+      <button class="btn btn-light ms-1" @click="uploadData()"><img src="../public/assets/upload.svg" alt="Nahraj dáta na server."></button>
+    </div>
+    
     <div class="input-group mt-3 mx-auto">
       <input type="text" class="form-control" v-model="inputText" placeholder="Zadaj úlohu...">
       <button class="btn btn-outline-secondary" type="button" @click="addTask()">Pridaj úlohu</button>
@@ -14,6 +19,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: "App",
   data() {
@@ -21,19 +28,41 @@ export default {
       inputText: "",
     }
   },
-
   methods: {
     addTask() {
       if (this.inputText != "") {
         this.$store.state.tasks.push({
           id: this.$store.state.tasks.length + 1,
           title: this.inputText,
-          isDone: false,
+          completed: false,
         });
 
         this.inputText = "";
       }
+    },
+    downloadData() {
+      // http://openlab.rf.gd/ToDoListVue/data.json
+      axios.get('data')
+        .then((response) => {
+          this.$store.state.tasks = response.data.tasks;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    },
+    uploadData() {
+      // http://openlab.rf.gd/ToDoListVue/data.json
+      axios.post('data', this.$store.state.tasks).then(response => {
+        if (response.status == 200) {
+          console.log("Data boli úspešne nahrané na server.");
+        }
+      }).catch(error => {
+        console.log(error);
+      });
     }
+  },
+  mounted() {
+    this.downloadData();
   }
 };
 </script>

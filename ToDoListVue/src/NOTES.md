@@ -35,15 +35,15 @@ Vue1:
 
 Vue2:
 [X] item sprav ako komponent, do ktoreho posles cely objekt (deleted a text)
-[] sprav tlacitko ktore getne z mock serveru cez axios data
+[X] sprav tlacitko ktore getne z mock serveru cez axios data
 [] sprav tlacitko ktore postne na mock server cez axios data
-[] sprav loadovanie do mounted
+[X] sprav loadovanie do mounted
 [] sprav savovanie po kazdej akcii v ui"
 
 [X] vie robit komponenty a vkladat ich do stranok
 [X] vie pouzivat parametre v komponentoch (props)
 [] vie robit axios requesty
-[] vie pouzivat mounted
+[X] vie pouzivat mounted
 [] vie robit methods, a menit data a obsah templates"	"todo list [] advanced
 
 Vue3:
