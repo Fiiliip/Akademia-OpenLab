@@ -5,14 +5,13 @@
       <button class="btn btn-light me-1" @click="downloadData()"><img src="../public/assets/download.svg" alt="Stiahni dáta zo serveru."></button>
       <button class="btn btn-light ms-1" @click="uploadData()"><img src="../public/assets/upload.svg" alt="Nahraj dáta na server."></button>
     </div>
-    
     <div class="input-group mt-3 mx-auto">
       <input type="text" class="form-control" v-model="inputText" placeholder="Zadaj úlohu...">
       <button class="btn btn-outline-secondary" type="button" @click="addTask()">Pridaj úlohu</button>
     </div>
     <div id="nav" class="d-flex justify-content-evenly border rounded-pill py-2 my-3 mx-auto">
-      <router-link class="text-decoration-none" to="/active">Aktívne</router-link>
-      <router-link class="text-decoration-none" to="/deleted">Odstránené</router-link>
+      <router-link class="text-decoration-none" to="/active">Aktívne ({{ activeTasksCount }})</router-link>
+      <router-link class="text-decoration-none" to="/deleted">Odstránené ({{ deletedTasksCount }})</router-link>
     </div>
   </div>
   <router-view />
@@ -63,6 +62,14 @@ export default {
   },
   mounted() {
     this.downloadData();
+  },
+  computed: {
+    activeTasksCount() {
+      return this.$store.state.tasks.filter((task) => !task.completed).length;
+    },
+    deletedTasksCount() {
+      return this.$store.state.tasks.filter((task) => task.completed).length;
+    }
   }
 };
 </script>
