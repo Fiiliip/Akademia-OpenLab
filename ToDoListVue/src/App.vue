@@ -41,9 +41,9 @@ export default {
     },
     downloadData() {
       // http://openlab.rf.gd/ToDoListVue/data.json
-      axios.get('data')
+      axios.get('http://openlab.rf.gd/ToDoListVue/api/tasks_GET.php')
         .then((response) => {
-          this.$store.state.tasks = response.data.tasks;
+          this.$store.state.tasks = response.data;
         })
         .catch((error) => {
           console.log(error);
@@ -51,7 +51,8 @@ export default {
     },
     uploadData() {
       // http://openlab.rf.gd/ToDoListVue/data.json
-      axios.post('data', this.$store.state.tasks).then(response => {
+      // http://openlab.rf.gd/ToDoListVue/api/tasks_POST.php
+      axios.post('http://openlab.rf.gd/ToDoListVue/api/tasks_POST.php', this.$store.state.tasks).then(response => {
         if (response.status == 200) {
           console.log("Data boli úspešne nahrané na server.");
         }
