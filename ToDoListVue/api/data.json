@@ -2,17 +2,17 @@
     "tasks": [
         {
             "id": 1,
-            "title": "Zistiť hĺbku dezénu na aute.",
-            "completed": false
-        },
-        {
-            "id": 2,
             "title": "Kúpiť 10ks vajec.",
             "completed": false
         },
         {
+            "id": 2,
+            "title": "Zaistiť čln o mólo.",
+            "completed": true
+        },
+        {
             "id": 3,
-            "title": "Ísť po mlieko, ale vrátiť sa aj domov.",
+            "title": "Nafúkať nafukovací čln.",
             "completed": false
         }
     ]
