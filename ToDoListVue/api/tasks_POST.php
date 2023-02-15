@@ -41,6 +41,12 @@ if (!isset($tasks)) {
 
 foreach ($tasks as $task) {
     foreach ($task as $key => $value) {
+        // Pretože v JSON súbore je hodnota kľúča 'done' typu boolean, tak sa musí porovnávať s hodnotou 'false' a nie s hodnotou '0' alebo '1'.
+        // Inak by funkcia empty() vracala hodnotu 'true' pre hodnotu 'false'.
+        if ($value == false) {
+            continue;
+        }
+
         if (empty($value)) {
             echo('Chýbajúce dáta. Hodnota kľúča ' . $key . ' je prázdna.');
             http_response_code(422);
