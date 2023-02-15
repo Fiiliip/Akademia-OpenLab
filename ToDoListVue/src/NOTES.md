@@ -37,7 +37,7 @@ Vue2:
 Čo spraviť?
 [X] item sprav ako komponent, do ktoreho posles cely objekt (deleted a text)
 [X] sprav tlacitko ktore getne z mock serveru cez axios data
-[] sprav tlacitko ktore postne na mock server cez axios data
+[X] sprav tlacitko ktore postne na mock server cez axios data
 [X] sprav loadovanie do mounted
 [] sprav savovanie po kazdej akcii v ui"
 

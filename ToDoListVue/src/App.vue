@@ -31,7 +31,7 @@ export default {
     addTask() {
       if (this.inputText != "") {
         this.$store.state.tasks.push({
-          id: this.$store.state.tasks.length + 1,
+          id: this.$store.state.tasks[this.$store.state.tasks.length - 1].id + 1,
           title: this.inputText,
           completed: false,
         });
@@ -40,8 +40,9 @@ export default {
       }
     },
     downloadData() {
-      // http://openlab.rf.gd/ToDoListVue/data.json
-      axios.get('http://openlab.rf.gd/ToDoListVue/api/tasks_GET.php')
+      let url = process.env.NODE_ENV !== 'production' ? 'http://localhost:8081/api/tasks_GET.php' : 'http://openlab.rf.gd/ToDoListVue/api/tasks_GET.php';
+
+      axios.get(url)
         .then((response) => {
           this.$store.state.tasks = response.data;
         })
@@ -50,12 +51,13 @@ export default {
         });
     },
     uploadData() {
-      // http://openlab.rf.gd/ToDoListVue/data.json
-      // http://openlab.rf.gd/ToDoListVue/api/tasks_POST.php
       let data = {
         tasks: this.$store.state.tasks
       }
-      axios.post('http://openlab.rf.gd/ToDoListVue/api/tasks_POST.php', data).then(response => {
+
+      let url = process.env.NODE_ENV !== 'production' ? 'http://localhost:8082/api/tasks_POST.php' : 'http://openlab.rf.gd/ToDoListVue/api/tasks_POST.php';
+
+      axios.post(url, data).then(response => {
         if (response.status == 200) {
           console.log("Data boli úspešne nahrané na server.");
         }
