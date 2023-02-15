@@ -40,6 +40,7 @@ export default {
       }
     },
     downloadData() {
+      // Lokálny server (localhost) je spusteny cez príkaz "php -S localhost:8081 tasks_GET.php" v priečinku, kde je daný súbor.
       let url = process.env.NODE_ENV !== 'production' ? 'http://localhost:8081/api/tasks_GET.php' : 'http://openlab.rf.gd/ToDoListVue/api/tasks_GET.php';
 
       axios.get(url)
@@ -55,6 +56,7 @@ export default {
         tasks: this.$store.state.tasks
       }
 
+      // Lokálny server (localhost) je spusteny cez príkaz "php -S localhost:8082 tasks_POST.php" v priečinku, kde je daný súbor.
       let url = process.env.NODE_ENV !== 'production' ? 'http://localhost:8082/api/tasks_POST.php' : 'http://openlab.rf.gd/ToDoListVue/api/tasks_POST.php';
 
       axios.post(url, data).then(response => {
