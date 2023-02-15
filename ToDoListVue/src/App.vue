@@ -52,7 +52,10 @@ export default {
     uploadData() {
       // http://openlab.rf.gd/ToDoListVue/data.json
       // http://openlab.rf.gd/ToDoListVue/api/tasks_POST.php
-      axios.post('http://openlab.rf.gd/ToDoListVue/api/tasks_POST.php', this.$store.state.tasks).then(response => {
+      let data = {
+        tasks: this.$store.state.tasks
+      }
+      axios.post('http://openlab.rf.gd/ToDoListVue/api/tasks_POST.php', data).then(response => {
         if (response.status == 200) {
           console.log("Data boli úspešne nahrané na server.");
         }
