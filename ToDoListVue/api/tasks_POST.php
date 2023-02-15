@@ -1,32 +1,26 @@
 <?php
-if (isset($_SERVER['HTTP_ORIGIN'])) {
-    // should do a check here to match $_SERVER['HTTP_ORIGIN'] to a
-    // whitelist of safe domains
-    header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
-    header('Access-Control-Allow-Credentials: true');
-    header('Access-Control-Max-Age: 86400');    // cache for 1 day
-}
-// Access-Control headers are received during OPTIONS requests
 if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
+    header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token');
+    header('Access-Control-Max-Age: 86400');
 
-    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
-        header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");         
+    http_response_code(200);
 
-    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
-        header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
-
+    return;
 }
 
-// if (!isset($_POST)) {
-//     echo('Dáta sú prázdne.');
-//     return;
-// }
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
+header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token');
 
+
+// Získaj dáta z request-u.
 $json = file_get_contents('php://input');
 $data = json_decode($json);
 
 if (!isset($data)) {
-    echo('Chýbajúce dáta. Dáta sú prázdne.');
+    echo('Chýbajúce dáta: Dáta sú prázdne.');
     http_response_code(422);
     return;
 }
@@ -34,21 +28,22 @@ if (!isset($data)) {
 $tasks = $data->tasks;
 
 if (!isset($tasks)) {
-    echo('Chýbajúce dáta. Pole úloh je prázdne.');
+    echo('Chýbajúce dáta: Pole úloh je prázdne.');
     http_response_code(422);
     return;
 }
 
 foreach ($tasks as $task) {
     foreach ($task as $key => $value) {
-        // Pretože v JSON súbore je hodnota kľúča 'done' typu boolean, tak sa musí porovnávať s hodnotou 'false' a nie s hodnotou '0' alebo '1'.
-        // Inak by funkcia empty() vracala hodnotu 'true' pre hodnotu 'false'.
+        // V JSON môže byť boolean hodnota kľúča "completed" nastavená na "false". V takomto prípade, kedy
+        // by sme skontrolovali danú hodnotu cez metódu empty(), tak by nám vrátila hodnotu 'true', pretože
+        // hodnota "false" sa berie ako práznda.
         if ($value == false) {
             continue;
         }
 
         if (empty($value)) {
-            echo('Chýbajúce dáta. Hodnota kľúča ' . $key . ' je prázdna.');
+            echo('Chýbajúce dáta: Hodnota kľúča ' . $key . ' je prázdna.');
             http_response_code(422);
             return;
         }
@@ -60,30 +55,43 @@ for ($i = 0; $i < count($tasks); $i++) {
     $tasks[$i] = (array)$tasks[$i];
 }
 
-$temp = $tasks;
+// $temp = $tasks;
 
-$tasks = loadTasksFromJSON();
+// $tasks = loadTasksFromJSON();
 
-$tasks = array_merge($tasks, $temp);
+// Odstráň duplikáty úloh.
+// for ($i = 0; $i < count($tasks); $i++) {
+//     for ($j = 0; $j < count($temp); $j++) {
+//         if ($tasks[$i]['id'] == $temp[$j]['id']) {
+//             if ($tasks[$i]['completed'] != $temp[$j]['completed']) {
+//                 $tasks[$i]['completed'] = $temp[$j]['completed'];
+//             }
+//             unset($temp[$j]);
+//             $temp = array_values($temp);
+//         }
+//     }
+// }
 
-for ($i = 0; $i < count($tasks); $i++) {
-    $tasks[$i]['id'] = $tasks[count($tasks) - 1]['id'] + $i;
-}
+// $tasks = array_merge($tasks, $temp);
 
-foreach ($tasks as $task) {
-    utf8_encode($task['title']);
-}
+// Pre-indexuj úlohy od 1.
+// for ($i = 0; $i < count($tasks); $i++) {
+//     $tasks[$i]['id'] = $tasks[count($tasks) - 1]['id'] + $i;
+// }
 
 $data = array(
     'tasks' => $tasks
 );
 
+// Zapíš dáta do JSON súboru.
 $json = json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 file_put_contents('data.json', $json);
 
 http_response_code(200);
 echo('Úlohy boli úspešne uložené.');
 exit;
+
+// ---------------------------------------------
 
 function loadTasksFromJSON() {
     $json = file_get_contents('data.json');
