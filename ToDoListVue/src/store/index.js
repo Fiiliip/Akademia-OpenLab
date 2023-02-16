@@ -21,7 +21,7 @@ const store = createStore({
       };
 
       this.state.tasks.push({
-        id: this.state.tasks[this.state.tasks.length - 1].id + 1,
+        id: this.state.tasks.length == 0 ? 1 : this.state.tasks[this.state.tasks.length - 1].id + 1,
         title: this.state.inputText,
         completed: false
       });
@@ -35,7 +35,7 @@ const store = createStore({
 
       if (this.state.useLocalStorage == true) { // Prečo tu musí byť "true" a nestačí len tá premenná?
         let data = JSON.parse(localStorage.getItem("toDoList_#Filip"));
-        this.state.tasks = data.tasks;
+        if (data != null) this.state.tasks = data.tasks;
         return;
       }
 
