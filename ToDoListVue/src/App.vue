@@ -1,13 +1,18 @@
 <template>
   <div class="container mt-3">
+    <button class="storageStatus" :style="this.$store.state.useLocalStorage ? 'background-color: red' : 'background-color: green'" @click="showSecretInfo()" :title="this.$store.state.useLocalStorage ? 'Na ukladanie sa používa lokálne úložisko.' : 'Na ukladanie sa používa server.'"></button>
     <h1 class="text-center">ToDo List</h1>
     <div class="d-flex justify-content-center">
-      <button class="btn btn-light me-1" @click="downloadData()"><img src="../public/assets/download.svg" alt="Stiahni dáta zo serveru."></button>
-      <button class="btn btn-light ms-1" @click="uploadData()"><img src="../public/assets/upload.svg" alt="Nahraj dáta na server."></button>
+      <button class="btn btn-light me-1" @click="this.$store.commit('loadData')">
+        <img src="../public/assets/download.svg" alt="Stiahni dáta zo serveru.">
+      </button>
+      <button class="btn btn-light ms-1" @click="this.$store.commit('saveData')">
+        <img src="../public/assets/upload.svg" alt="Nahraj dáta na server.">
+      </button>
     </div>
     <div class="input-group mt-3 mx-auto">
-      <input type="text" class="form-control" v-model="inputText" placeholder="Zadaj úlohu...">
-      <button class="btn btn-outline-secondary" type="button" @click="addTask()">Pridaj úlohu</button>
+      <input type="text" class="form-control" v-model="this.$store.state.inputText" placeholder="Zadaj úlohu...">
+      <button class="btn btn-outline-secondary" type="button" @click="this.emitter.emit('addTask')">Pridaj úlohu</button>
     </div>
     <div id="nav" class="d-flex justify-content-evenly border rounded-pill py-2 my-3 mx-auto">
       <router-link class="text-decoration-none" to="/active">Aktívne ({{ activeTasksCount }})</router-link>
@@ -18,58 +23,17 @@
 </template>
 
 <script>
-import axios from "axios";
+
 
 export default {
   name: "App",
-  data() {
-    return {
-      inputText: "",
-    }
-  },
   methods: {
-    addTask() {
-      if (this.inputText != "") {
-        this.$store.state.tasks.push({
-          id: this.$store.state.tasks[this.$store.state.tasks.length - 1].id + 1,
-          title: this.inputText,
-          completed: false,
-        });
-
-        this.inputText = "";
-      }
-    },
-    downloadData() {
-      // Lokálny server (localhost) je spusteny cez príkaz "php -S localhost:8081 tasks_GET.php" v priečinku, kde je daný súbor.
-      let url = process.env.NODE_ENV !== 'production' ? 'http://localhost:8081/api/tasks_GET.php' : 'http://openlab.rf.gd/ToDoListVue/api/tasks_GET.php';
-
-      axios.get(url)
-        .then((response) => {
-          this.$store.state.tasks = response.data;
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    },
-    uploadData() {
-      let data = {
-        tasks: this.$store.state.tasks
-      }
-
-      // Lokálny server (localhost) je spusteny cez príkaz "php -S localhost:8082 tasks_POST.php" v priečinku, kde je daný súbor.
-      let url = process.env.NODE_ENV !== 'production' ? 'http://localhost:8082/api/tasks_POST.php' : 'http://openlab.rf.gd/ToDoListVue/api/tasks_POST.php';
-
-      axios.post(url, data).then(response => {
-        if (response.status == 200) {
-          console.log("Data boli úspešne nahrané na server.");
-        }
-      }).catch(error => {
-        console.log(error);
-      });
+    showSecretInfo() {
+      alert("- Červená, ak sa používa na ukladanie lokálne úložisko.\n- Zelená, ak sa používa na ukladanie server. \n\n- Pre ukladanie dát do lokálneho úložiska, napíš do 'inputu' pre úlohy '#localStorage'.\n- Pre ukladanie dát na server, napíš do 'inputu' pre úlohy '#server'.");
     }
   },
   mounted() {
-    this.downloadData();
+    this.$store.commit('loadData');
   },
   computed: {
     activeTasksCount() {
@@ -101,6 +65,15 @@ export default {
 
 * ::-webkit-scrollbar {
     display: none;
+}
+
+.storageStatus {
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .input-group {
