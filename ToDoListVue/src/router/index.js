@@ -18,6 +18,12 @@ const routes = [
     name: "deleted-tasks",
     component: () => import('@/plugins/app/deleted-tasks/deleted-tasks.vue'),
   },
+  {
+    path: "/edit/:id",
+    name: "edit-task",
+    component: () => import('@/plugins/app/edit-task/edit-task.vue'),
+    props: true
+  }
 ];
 
 const router = createRouter({
