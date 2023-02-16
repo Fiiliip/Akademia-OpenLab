@@ -16,7 +16,7 @@
     </div>
     <div id="nav" class="d-flex justify-content-evenly border rounded-pill py-2 my-3 mx-auto">
       <router-link class="text-decoration-none" to="/active">Aktívne ({{ activeTasksCount }})</router-link>
-      <router-link class="text-decoration-none" to="/deleted">Odstránené ({{ deletedTasksCount }})</router-link>
+      <router-link class="text-decoration-none" to="/deleted">Splnené ({{ deletedTasksCount }})</router-link>
     </div>
   </div>
   <router-view />
