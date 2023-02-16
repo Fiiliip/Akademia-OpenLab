@@ -2,7 +2,7 @@
   <div class="container">
     <ul class="row justify-content-center list-group mt-3" v-if="areThereActiveTasks">
       <li class="list-group-item" v-for="task in filteredActiveTasks.slice().reverse()" :key="task.id">
-        <TaskItem :task="task" @deleteTask="task.completed = true"></TaskItem>
+        <TaskItem :task="task"></TaskItem>
       </li>
     </ul>
     <p class="text-center" v-else>Nie sú žiadne aktívne úlohy.</p>

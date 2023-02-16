@@ -8,12 +8,12 @@
         {
             "id": 2,
             "title": "Zaistiť čln o mólo.",
-            "completed": true
+            "completed": false
         },
         {
             "id": 3,
             "title": "Nafúkať nafukovací čln.",
-            "completed": false
+            "completed": true
         }
     ]
 }
