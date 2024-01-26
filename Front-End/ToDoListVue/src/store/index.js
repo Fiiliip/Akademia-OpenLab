@@ -85,7 +85,6 @@ const store = createStore({
       }
 
       localStorage.setItem("useLocalStorage_toDoList_#Filip", this.state.useLocalStorage);
-      this.commit('saveData');
     }
   }
 })
