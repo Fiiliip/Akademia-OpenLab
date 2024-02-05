@@ -18,8 +18,9 @@
 </html>
 
 <?php
-include('Student.php');
+include('StudentLogger.php');
 
+    // Načítaj meno študenta a jeho čas príchodu.
     if (isset($_GET['studentName']) && $_GET['studentName'] != "") 
     {
         $studentName = $_GET['studentName'];
@@ -30,73 +31,17 @@ include('Student.php');
         $studentArrivalTime = $currentDateTime;
     } else 
     {
-        die();
+        die('Error!');
     }
 
-    $students = Student::getStudentsFromJSON();
+    $arrivalCounters = StudentLogger::loadArrivalsCounter();
+    $arrivalCounters[$studentName] = $arrivalCounters[$studentName] + 1;
+    print_r($arrivalCounters);
+    StudentLogger::writeArrivalsCounter($arrivalCounters);
 
-    foreach ($students as $student)
-    {
-        if ($student['name'] == $studentName) {
-
-        }
-    }
-
-?>
-
-<?php
-
-    // class Student {
-    //     public $name;
-    //     public $arrivalCounter;
-    // }
-
-    // if (isset($_GET['studentName']) && $_GET['studentName'] != "")
-    // {
-    //     $studentName = $_GET['studentName'];
-    //     $studentArrivalTime = $currentDateTime;
-    // } 
-    // else if (isset($_POST['studentName']) && $_POST['studentName'] != "")
-    // {
-    //     $studentName = $_POST['studentName'];
-    //     $studentArrivalTime = $currentDateTime;
-    // }
-
-    // $student = new Student();
-    // $student->name = $studentName;
-    // $student->arrivalCounter = 1;
+    $student = new StudentLogger($studentName);
+    $arrivals = $student->loadArrivals();
+    $arrivals[$studentName][] = array($studentArrivalTime => "");
+    $student->writeArrivals($arrivals);
     
-    // writeToJSON($student);
-
-    // /////////////////////////////////////////
-
-    // function writeToJSON($content)
-    // {
-    //     $studentExists = false;
-    //     if (file_exists('studenti.json'))
-    //     {
-    //         $content = file_get_contents('studenti.json');
-    //         $content = json_decode($content);
-
-    //         print_r($content);
-
-    //         for ($i = 0; $i < count($content); $i++)
-    //         {
-    //             if ($content[$i]->name == $content->name)
-    //             {
-    //                 $studentExists = true;
-    //                 $content[$i]->arrivalCounter += 1;
-    //                 break;
-    //             }
-    //         }
-    //     }
-
-    //     if (!$studentExists)
-    //     {
-    //         array_push($content, $content);
-    //     }
-
-    //     file_put_contents('studenti.json', $content);
-    // }
-
 ?>
