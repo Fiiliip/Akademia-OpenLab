@@ -22,12 +22,17 @@ class Arrival extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [];
+    protected $fillable = [
+        'name',
+        'created_at'
+    ];
 
     /**
      * @var array Validation rules for attributes
      */
-    public $rules = [];
+    public $rules = [
+        'name' => 'required'
+    ];
 
     /**
      * @var array Attributes to be cast to native types
