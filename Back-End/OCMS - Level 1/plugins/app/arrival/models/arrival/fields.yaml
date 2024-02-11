@@ -15,3 +15,8 @@ fields:
         type: datepicker
         mode: datetime
         required: true
+    is_late:
+        label: Late
+        type: switch
+        default: 0
+        disabled: false

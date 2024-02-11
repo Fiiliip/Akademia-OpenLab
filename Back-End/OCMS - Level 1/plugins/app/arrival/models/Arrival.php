@@ -24,6 +24,7 @@ class Arrival extends Model
      */
     protected $fillable = [
         'name',
+        'is_late',
         'created_at'
     ];
 

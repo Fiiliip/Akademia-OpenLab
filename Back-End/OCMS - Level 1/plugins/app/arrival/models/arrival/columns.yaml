@@ -12,3 +12,6 @@ columns:
     created_at:
         label: Arrival
         type: datetime
+    is_late:
+        label: Late
+        type: switch
