@@ -24,6 +24,7 @@ class Arrival extends Model
      */
     protected $fillable = [
         'name',
+        'user_id',
         'is_late',
         'created_at'
     ];
@@ -70,7 +71,9 @@ class Arrival extends Model
     public $hasMany = [];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
-    public $belongsTo = [];
+    public $belongsTo = [
+        'user' => 'RainLab\User\Models\User'
+    ];
     public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
