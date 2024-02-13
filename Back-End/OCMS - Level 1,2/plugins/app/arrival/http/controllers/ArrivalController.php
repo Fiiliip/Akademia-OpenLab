@@ -4,21 +4,23 @@ use Backend\Classes\Controller;
 use Illuminate\Http\Request;
 
 use App\Arrival\Models\Arrival;
+use App\Arrival\Http\Resources\ArrivalResource;
 
 class ArrivalController extends Controller {
-    public function getArrivals() {
+    public function index() {
         $arrivals = Arrival::all();
-        return response()->json($arrivals, 200);
+        return ArrivalResource::collection($arrivals);
     }
 
-    public function getArrival($id) {
-        $arrival = Arrival::where('id', $id)->first();
-        return response()->json($arrival, 200);
+    public function show($user_id) {
+        $arrival = Arrival::where('user_id', $user_id)->first();
+        return new ArrivalResource($arrival);
     }
 
-    public function createArrival(Request $request) {
+    public function store(Request $request) {
         $arrival = new Arrival();
         $arrival->fill($request->all());
+        $arrival->user_id = auth()->user()->id;
         $arrival->save();
         return response()->json($arrival, 201);
     }
