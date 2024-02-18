@@ -9,6 +9,11 @@ columns:
     name:
         label: Name
         searchable: true
+    user:
+        label: User Name
+        relation: user
+        select: name
+        searchable: true
     created_at:
         label: Arrival
         type: datetime

@@ -22,6 +22,6 @@ class ArrivalController extends Controller {
         $arrival->fill($request->all());
         $arrival->user_id = auth()->user()->id;
         $arrival->save();
-        return response()->json($arrival, 201);
+        return new ArrivalResource($arrival);
     }
 }

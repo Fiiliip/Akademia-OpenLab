@@ -11,7 +11,7 @@ class ArrivalResource extends JsonResource {
         return [
             "id" => $this->id,
             "name" => $this->name,
-            "user" => new UserResource(User::find($this->user_id)),
+            "user" => new UserResource($this->user),
             "is_late" => $this->is_late,
             "created_at" => date($this->created_at)
         ];

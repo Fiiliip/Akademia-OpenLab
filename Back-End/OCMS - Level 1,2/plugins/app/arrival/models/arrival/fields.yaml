@@ -10,6 +10,11 @@ fields:
         label: Name
         required: true
         disabled: false
+    user:
+        label: User Name
+        type: recordfinder
+        list: ~/plugins/rainlab/user/models/user/columns.yaml
+        title: Find User Record
     created_at:
         label: Arrival
         type: datepicker
