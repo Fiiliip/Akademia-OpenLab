@@ -5,10 +5,11 @@
     ], function() {
         Route::middleware(['auth'])->group(function() {
             Route::get('/arrival/{user_id}', 'ArrivalController@show');
+            Route::post('/arrival', 'ArrivalController@store');
         });
 
         Route::get('/arrivals', 'ArrivalController@index');
 
-        Route::post('/arrival', 'ArrivalController@store');
+
     });
 ?>

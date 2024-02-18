@@ -137,7 +137,7 @@ return [
     |
     */
 
-    'key' => 'v1ehY1MwH0QRhDN53s3KIzvM6XCvKUGb',
+    'key' => 'base64:UkcFQYse90aBs3IM288qTsF/9M1jtg2zZt+u2CSGlCU=',
 
     'cipher' => 'AES-256-CBC',
 
