@@ -3,6 +3,9 @@
 use Backend;
 use System\Classes\PluginBase;
 
+use Event;
+use Log;
+
 use RainLab\User\Models\User;
 
 /**
@@ -44,6 +47,11 @@ class Plugin extends PluginBase
     {
         User::extend(function($model) {
             $model->hasMany['arrivals'] = ['App\Arrival\Models\Arrival'];
+        });
+
+        Event::listen('app.arrival.show', function($user_id) {
+            $user = User::find($user_id);
+            Log::info('User ' . $user->name . ' has requested their arrival information.');
         });
     }
 
