@@ -15,8 +15,10 @@ class AddLateColumn extends Migration
 
     public function down()
     {
-        Schema::table('app_arrival_arrivals', function (Blueprint $table) {
-            $table->dropColumn('is_late');
-        });
+        if (Schema::hasColumn('app_arrival_arrivals', 'is_late')) {
+            Schema::table('app_arrival_arrivals', function (Blueprint $table) {
+                $table->dropColumn('is_late');
+            });
+        }
     }
 }
