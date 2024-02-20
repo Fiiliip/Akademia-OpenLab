@@ -4,7 +4,7 @@
         'namespace' => 'App\Arrival\Http\Controllers',
     ], function() {
         Route::middleware(['auth'])->group(function() {
-            Route::get('/arrival/{user_id}', 'ArrivalController@show');
+            Route::get('/arrival', 'ArrivalController@show');
         });
 
         Route::get('/arrivals', 'ArrivalController@index');

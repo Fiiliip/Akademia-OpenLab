@@ -14,10 +14,12 @@ class ArrivalController extends Controller {
         return ArrivalResource::collection($arrivals);
     }
 
-    public function show($user_id) {
-        $arrival = Arrival::where('user_id', $user_id)->first();
+    public function show() {
+        $user_id = auth()->user()->id;
+        // Get all arrivals for the user
+        $arrivals = Arrival::where('user_id', $user_id)->get();
         Event::fire('app.arrival.show', [$user_id]);
-        return new ArrivalResource($arrival);
+        return ArrivalResource::collection($arrivals);
     }
 
     public function store(Request $request) {
