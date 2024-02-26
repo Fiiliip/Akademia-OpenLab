@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Task
+
+# Model Form Field configuration
+form: $/teamgrid/tasks/models/task/fields.yaml
+
+# Model Class name
+modelClass: TeamGrid\Tasks\Models\Task
+
+# Default redirect location
+defaultRedirect: teamgrid/tasks/tasks
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: teamgrid/tasks/tasks/update/:id
+    redirectClose: teamgrid/tasks/tasks
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: teamgrid/tasks/tasks
+    redirectClose: teamgrid/tasks/tasks
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

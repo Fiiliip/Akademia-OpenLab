@@ -1,0 +1,33 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    task:
+        label: Task
+        type: relation
+        select: id
+        required: true
+        disabled: false
+    user:
+        label: User
+        type: relation
+        select: id
+        required: true
+        disabled: false
+    start_time:
+        label: Start Time
+        type: datepicker
+        mode: datetime
+        required: true
+        disabled: false
+    end_time:
+        label: End Time
+        type: datepicker
+        mode: datetime
+        required: true
+        disabled: false
+

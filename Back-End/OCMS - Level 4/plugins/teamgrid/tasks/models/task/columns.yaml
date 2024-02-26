@@ -1,0 +1,19 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    project:
+        label: Project Title
+        type: relation
+        select: id
+        searchable: true
+    title:
+        label: Title
+        searchable: true
+    is_done:
+        label: Done
+        type: switch

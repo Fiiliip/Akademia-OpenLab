@@ -1,0 +1,21 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    title:
+        label: Title
+    # tasks:
+    #     label: Tasks
+    #     type: recordfinder
+    #     list: ~/plugins/teamgrid/tasks/models/task/columns.yaml
+    #     title: Find Task Record    
+    # users:
+    #     label: Users in Project
+    #     type: recordfinder
+    #     list: ~/plugins/rainlab/user/models/user/columns.yaml
+    #     title: Find User Record
+    

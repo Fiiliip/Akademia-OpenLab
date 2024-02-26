@@ -1,0 +1,46 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    project:
+        label: Project
+        type: relation
+        select: id
+        required: true
+        disabled: false
+    user:
+        label: User
+        type: relation
+        select: id
+        required: true
+        disabled: false
+    title:
+        label: Title
+        required: true
+        disabled: false
+    planned_start:
+        label: Planned Start
+        type: datepicker
+        mode: datetime
+        required: true
+        disabled: false
+    planned_end:
+        label: Planned End
+        type: datepicker
+        mode: datetime
+        required: true
+        disabled: false
+    planned_time:
+        label: Planned Time
+        type: number
+        disabled: true
+    is_done:
+        label: Done
+        type: switch
+        default: 0
+        disabled: false
+    

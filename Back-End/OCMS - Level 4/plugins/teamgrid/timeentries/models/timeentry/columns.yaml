@@ -1,0 +1,26 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    task:
+        label: Task
+        type: relation
+        select: id
+        searchable: true
+    user:
+        label: User
+        type: relation
+        select: id
+        searchable: true
+    start_time:
+        label: Start Time
+        type: datetime
+        searchable: true
+    end_time:
+        label: End Time
+        type: datetime
+        searchable: true
