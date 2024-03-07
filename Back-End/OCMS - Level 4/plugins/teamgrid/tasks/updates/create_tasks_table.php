@@ -10,7 +10,6 @@ class CreateTasksTable extends Migration
     {
         Schema::create('teamgrid_tasks_tasks', function (Blueprint $table) {
             $table->engine = 'InnoDB';
-
             $table->increments('id');
 
             $table->integer('project_id')->unsigned();
@@ -19,8 +18,8 @@ class CreateTasksTable extends Migration
             $table->string('title');
             $table->dateTime('planned_start')->nullable();
             $table->dateTime('planned_end')->nullable();
-            $table->dateTime('planned_time')->nullable();
-            $table->boolean('is_done')->default(false);
+            $table->time('planned_time')->nullable();
+            $table->boolean('is_completed')->default(false);
 
             $table->timestamps();
         });

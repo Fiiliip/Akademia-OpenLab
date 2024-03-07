@@ -1,3 +1,4 @@
 1.0.1: 
 - First version of Tasks
 - create_tasks_table.php
+- create_task_subscribers_table.php

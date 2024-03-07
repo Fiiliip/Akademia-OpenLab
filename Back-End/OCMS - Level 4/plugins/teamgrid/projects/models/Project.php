@@ -23,7 +23,9 @@ class Project extends Model
      * @var array Fillable fields
      */
     protected $fillable = [
-        'title'
+        'title',
+        'customer_id',
+        'project_manager_id',
     ];
 
     /**
@@ -70,9 +72,12 @@ class Project extends Model
     ];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
-    public $belongsTo = [];
+    public $belongsTo = [
+        'project_manager' => ['RainLab\User\Models\User'],
+        'customer' => ['RainLab\User\Models\User']
+    ];
     public $belongsToMany = [
-        'users' => ['RainLab\User\Models\User']
+        'users' => ['RainLab\User\Models\User'] // TODO: Je potrebné mať tento vzťah?
     ];
     public $morphTo = [];
     public $morphOne = [];
