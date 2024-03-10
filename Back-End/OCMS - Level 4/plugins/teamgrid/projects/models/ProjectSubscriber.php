@@ -1,18 +1,18 @@
-<?php namespace TeamGrid\Tasks\Models;
+<?php namespace TeamGrid\Projects\Models;
 
 use Model;
 
 /**
- * Task Model
+ * ProjectSubscriber Model
  */
-class Task extends Model
+class ProjectSubscriber extends Model
 {
     use \October\Rain\Database\Traits\Validation;
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'teamgrid_tasks_tasks';
+    public $table = 'teamgrid_projects_project_subscribers';
 
     /**
      * @var array Guarded fields
@@ -22,22 +22,12 @@ class Task extends Model
     /**
      * @var array Fillable fields
      */
-    protected $fillable = [
-        'project_id',
-        'title',
-        'planned_start',
-        'planned_end',
-        'planned_time',
-        'is_done'
-    ];
+    protected $fillable = [];
 
     /**
      * @var array Validation rules for attributes
      */
-    public $rules = [
-        'project_id' => 'required',
-        'title' => 'required',
-    ];
+    public $rules = [];
 
     /**
      * @var array Attributes to be cast to native types
@@ -71,17 +61,14 @@ class Task extends Model
      * @var array Relations
      */
     public $hasOne = [];
-    public $hasMany = [
-        'time_entries' => ['TeamGrid\TimeEntries\Models\TimeEntry']
-    ];
+    public $hasMany = [];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
     public $belongsTo = [
-        'project' => ['TeamGrid\Projects\Models\Project'],
+        'project' => ['TeamGrid\Projects\Models\Project', 'project_id', 'id'],
+        'subscriber' => ['RainLab\User\Models\User', 'subscriber_id', 'id']
     ];
-    public $belongsToMany = [
-        'users' => ['RainLab\User\Models\User']
-    ];
+    public $belongsToMany = [];
     public $morphTo = [];
     public $morphOne = [];
     public $morphMany = [];

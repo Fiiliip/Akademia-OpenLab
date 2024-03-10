@@ -77,7 +77,7 @@ class Project extends Model
         'customer' => ['RainLab\User\Models\User']
     ];
     public $belongsToMany = [
-        'users' => ['RainLab\User\Models\User'] // TODO: Je potrebné mať tento vzťah?
+        'users' => ['RainLab\User\Models\User']
     ];
     public $morphTo = [];
     public $morphOne = [];

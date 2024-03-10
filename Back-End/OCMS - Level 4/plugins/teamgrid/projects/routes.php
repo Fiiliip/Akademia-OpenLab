@@ -1,4 +1,8 @@
 <?php
+
+use TeamGrid\Projects\Http\Middlewares\ProjectMiddleware;
+
+
 Route::group([
     'prefix' => 'api/v1',
     'namespace' => 'TeamGrid\Projects\Http\Controllers'
@@ -13,8 +17,10 @@ Route::group([
             
             Route::post('/create', 'ProjectController@store');
             
-            Route::patch('/update/{id}', 'ProjectController@update');
-            Route::patch('/complete/{id}', 'ProjectController@complete');
+            Route::middleware([ProjectMiddleware::class])->group(function() {
+                Route::patch('/update/{id}', 'ProjectController@update');
+                Route::patch('/complete/{id}', 'ProjectController@complete');
+            });
         });
     });
 });

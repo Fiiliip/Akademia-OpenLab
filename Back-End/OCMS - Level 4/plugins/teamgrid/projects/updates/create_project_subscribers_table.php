@@ -8,7 +8,7 @@ class CreateProjectSubscribersTable extends Migration
 {
     public function up()
     {
-        Schema::create('teamgrid_project_subscribers', function (Blueprint $table) {
+        Schema::create('teamgrid_projects_project_subscribers', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->primary(['project_id', 'subscriber_id']);
 
@@ -24,6 +24,6 @@ class CreateProjectSubscribersTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('teamgrid_project_subscribers');
+        Schema::dropIfExists('teamgrid_projects_project_subscribers');
     }
 }

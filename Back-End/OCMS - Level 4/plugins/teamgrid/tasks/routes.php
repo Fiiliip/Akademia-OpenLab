@@ -1,4 +1,8 @@
 <?php
+
+use TeamGrid\Tasks\Http\Middlewares\TaskMiddleware;
+
+
 Route::group([
     'prefix' => 'api/v1',
     'namespace' => 'TeamGrid\Tasks\Http\Controllers',
@@ -12,9 +16,11 @@ Route::group([
             Route::get('/{id}', 'TaskController@show');
 
             Route::post('/create', 'TaskController@store');
-
-            Route::patch('/update/{id}', 'TaskController@update');
-            Route::patch('/complete/{id}', 'TaskController@complete');
+            
+            Route::middleware([TaskMiddleware::class])->group(function() {
+                Route::patch('/update/{id}', 'TaskController@update');
+                Route::patch('/complete/{id}', 'TaskController@complete');
+            });
         });
     });
 });

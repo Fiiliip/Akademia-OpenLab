@@ -8,9 +8,9 @@ class CreateTaskSubscribersTable extends Migration
 {
     public function up()
     {
-        Schema::create('teamgrid_task_subscribers', function (Blueprint $table) {
+        Schema::create('teamgrid_tasks_task_subscribers', function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->increments('id');
+            $table->primary(['task_id', 'subscriber_id']);
 
             $table->integer('task_id')->unsigned();
             $table->foreign('task_id')->references('id')->on('teamgrid_tasks_tasks')->onUpdate('cascade')->onDelete('cascade');
@@ -24,6 +24,6 @@ class CreateTaskSubscribersTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('teamgrid_task_subscribers');
+        Schema::dropIfExists('teamgrid_tasks_task_subscribers');
     }
 }
