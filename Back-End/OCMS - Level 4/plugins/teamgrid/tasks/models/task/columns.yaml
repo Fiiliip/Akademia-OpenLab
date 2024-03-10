@@ -8,12 +8,12 @@ columns:
         searchable: true
     project:
         label: Project Title
-        type: relation
-        select: id
+        relation: project
+        select: title
         searchable: true
     title:
         label: Title
         searchable: true
-    is_done:
-        label: Done
+    is_completed:
+        label: Completed
         type: switch

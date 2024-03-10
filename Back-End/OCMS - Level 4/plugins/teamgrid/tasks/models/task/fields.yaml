@@ -8,14 +8,8 @@ fields:
         disabled: true
     project:
         label: Project
-        type: relation
-        select: id
-        required: true
-        disabled: false
-    user:
-        label: User
-        type: relation
-        select: id
+        relation: project
+        select: concat(id, ' ', title)
         required: true
         disabled: false
     title:
@@ -38,8 +32,8 @@ fields:
         label: Planned Time
         type: number
         disabled: true
-    is_done:
-        label: Done
+    is_completed:
+        label: Completed
         type: switch
         default: 0
         disabled: false

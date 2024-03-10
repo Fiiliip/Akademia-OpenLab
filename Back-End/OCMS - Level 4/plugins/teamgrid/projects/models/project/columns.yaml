@@ -9,3 +9,17 @@ columns:
     title:
         label: Title
         searchable: true
+    customer:
+        label: Customer
+        relation: customer
+        select: concat(name, ' ', surname)
+        searchable: true
+    project_manager:
+        label: Project Manager
+        relation: project_manager
+        select: concat(name, ' ', surname)
+        searchable: true
+    is_completed:
+        label: Completed
+        type: switch
+

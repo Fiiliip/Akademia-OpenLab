@@ -8,6 +8,18 @@ fields:
         disabled: true
     title:
         label: Title
+        required: true
+    customer:
+        label: Customer
+        type: relation
+        select: username
+    project_manager:
+        label: Project Manager
+        type: relation
+        select: username
+    is_completed:
+        label: Completed
+        type: switch
     # tasks:
     #     label: Tasks
     #     type: recordfinder
