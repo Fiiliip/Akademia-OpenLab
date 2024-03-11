@@ -9,13 +9,13 @@ fields:
     task:
         label: Task
         type: relation
-        select: id
+        select: title
         required: true
         disabled: false
     user:
         label: User
         type: relation
-        select: id
+        select: username
         required: true
         disabled: false
     start_time:

@@ -8,13 +8,13 @@ columns:
         searchable: true
     task:
         label: Task
-        type: relation
-        select: id
+        relation: task
+        select: title
         searchable: true
     user:
         label: User
-        type: relation
-        select: id
+        relation: user
+        select: concat(name, ' ', surname)
         searchable: true
     start_time:
         label: Start Time
