@@ -87,4 +87,17 @@ class Task extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    public function afterUpdate() {
+        $project = $this->project;
+
+        if (!$project) return;
+
+        $totalTaskCount = $project->tasks()->count();
+        $completedTaskCount = $project->tasks()->where('is_completed', true)->count();
+
+        $totalTaskCount == $completedTaskCount ? $project->is_completed = true : $project->is_completed = false;
+        
+        $project->save();
+    }
 }

@@ -68,7 +68,7 @@ class Project extends Model
      */
     public $hasOne = [];
     public $hasMany = [
-        'tasks' => ['TeamGrid\Tasks\Models\Task'],
+        'tasks' => ['TeamGrid\Tasks\Models\Task', 'key' => 'project_id'],
     ];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
@@ -84,4 +84,22 @@ class Project extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    public function getTaskCountAttribute() 
+    {
+        return $this->tasks()->count();
+    }
+
+    public function getCompletedTaskCountAttribute()
+    {
+        return $this->tasks()->where('is_completed', true)->count();
+    }
+
+    public function getAnotherCompletedTaskCountAttribute()
+    {
+        $totalTaskCount = $this->tasks()->count();
+        $completedTaskCount = $this->tasks()->where('is_completed', true)->count();
+
+        return "{$completedTaskCount} / {$totalTaskCount}";
+    }
 }

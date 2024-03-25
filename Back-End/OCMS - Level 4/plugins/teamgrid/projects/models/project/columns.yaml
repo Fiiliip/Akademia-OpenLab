@@ -19,6 +19,12 @@ columns:
         relation: project_manager
         select: concat(name, ' ', surname)
         searchable: true
+    completed_tasks:
+        label: Completed Tasks
+        type: partial
+        path: ~/plugins/teamgrid/projects/models/project/_completed_tasks_column.htm
+    another_completed_task_count:
+        label: Another Completed Tasks
     is_completed:
         label: Completed
         type: switch

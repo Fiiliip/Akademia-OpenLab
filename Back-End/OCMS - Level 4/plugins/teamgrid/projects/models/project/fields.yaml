@@ -12,22 +12,21 @@ fields:
     customer:
         label: Customer
         type: relation
-        select: username
+        select: "'ID: ' || id || ' - ' || name || ' ' || surname"
     project_manager:
         label: Project Manager
         type: relation
-        select: username
+        select: "'ID: ' || id || ' - ' || name || ' ' || surname"
     is_completed:
         label: Completed
         type: switch
-    # tasks:
-    #     label: Tasks
-    #     type: recordfinder
-    #     list: ~/plugins/teamgrid/tasks/models/task/columns.yaml
-    #     title: Find Task Record    
-    # users:
-    #     label: Users in Project
-    #     type: recordfinder
-    #     list: ~/plugins/rainlab/user/models/user/columns.yaml
-    #     title: Find User Record
+    tasks:
+        label: Tasks
+        type: relation
+        select: title
+    tasks_another_approach:
+        label: Tasks Another Approach
+        type: partial
+        path: ~/plugins/teamgrid/projects/models/project/_tasks_another_approach.htm
+
     
