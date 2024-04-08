@@ -24,3 +24,5 @@ columns:
         label: End Time
         type: datetime
         searchable: true
+    duration:
+        label: Duration

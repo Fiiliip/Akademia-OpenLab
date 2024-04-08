@@ -30,4 +30,10 @@ fields:
         mode: datetime
         required: true
         disabled: false
+    duration:
+        label: Duration
+        type: datepicker
+        mode: time
+        span: left
+        disabled: true
 

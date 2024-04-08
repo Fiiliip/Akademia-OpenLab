@@ -20,13 +20,22 @@ fields:
     is_completed:
         label: Completed
         type: switch
+    another_completed_task_count:
+        label: Completed Tasks
+        disabled: true
+    total_time_spent:
+        label: Total Time Spent (H:M:S)
+        disabled: true
     tasks:
-        label: Tasks
-        type: relation
-        select: title
-    tasks_another_approach:
-        label: Tasks Another Approach
         type: partial
-        path: ~/plugins/teamgrid/projects/models/project/_tasks_another_approach.htm
+        path: tasks
+    # tasks:
+    #     label: Tasks
+    #     type: relation
+    #     select: title
+    # tasks_another_approach:
+    #     label: Tasks Another Approach
+    #     type: partial
+    #     path: ~/plugins/teamgrid/projects/models/project/_tasks_another_approach.htm
 
     

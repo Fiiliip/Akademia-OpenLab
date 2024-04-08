@@ -1,6 +1,7 @@
 <?php namespace TeamGrid\TimeEntries\Models;
 
 use Model;
+use DateTime;
 
 /**
  * TimeEntry Model
@@ -83,4 +84,17 @@ class TimeEntry extends Model
     public $morphMany = [];
     public $attachOne = [];
     public $attachMany = [];
+
+    public function getDuration()
+    {
+        $start_time = new DateTime($this->start_time);
+        $end_time = new DateTime($this->end_time) ?? new DateTime();
+
+        return $start_time->diff($end_time);
+    }
+
+    public function getDurationAttribute()
+    {
+        return $this->getDuration()->format('%H:%I:%S');
+    }
 }

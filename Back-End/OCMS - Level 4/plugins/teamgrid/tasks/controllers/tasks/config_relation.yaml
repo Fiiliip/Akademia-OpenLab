@@ -1,0 +1,9 @@
+time_entries:
+    label: Time Entry
+    deferredBinding: true
+    view:
+      list: $/teamgrid/timeentries/models/timeentry/columns.yaml
+      toolbarButtons: create|delete
+    manage:
+      form: $/teamgrid/timeentries/models/timeentry/fields.yaml
+      recordsPerPage: 10

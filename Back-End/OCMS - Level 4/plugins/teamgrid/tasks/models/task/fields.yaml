@@ -30,11 +30,16 @@ fields:
         disabled: false
     planned_time:
         label: Planned Time
-        type: number
+        disabled: true
+    total_time_spent:
+        label: Total Time Spent (H:M:S)
         disabled: true
     is_completed:
         label: Completed
         type: switch
         default: 0
         disabled: false
+    time_entries:
+        type: partial
+        path: time_entries
     

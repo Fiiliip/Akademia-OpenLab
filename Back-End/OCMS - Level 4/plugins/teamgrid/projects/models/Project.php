@@ -1,6 +1,7 @@
 <?php namespace TeamGrid\Projects\Models;
 
 use Model;
+use DateInterval;
 
 /**
  * Project Model
@@ -68,7 +69,7 @@ class Project extends Model
      */
     public $hasOne = [];
     public $hasMany = [
-        'tasks' => ['TeamGrid\Tasks\Models\Task', 'key' => 'project_id'],
+        'tasks' => ['TeamGrid\Tasks\Models\Task'],
     ];
     public $hasOneThrough = [];
     public $hasManyThrough = [];
@@ -101,5 +102,29 @@ class Project extends Model
         $completedTaskCount = $this->tasks()->where('is_completed', true)->count();
 
         return "{$completedTaskCount} / {$totalTaskCount}";
+    }
+
+    public function getTotalTimeSpent() {
+        $totalTime = new DateInterval("PT0S");
+        foreach ($this->tasks as $task) {
+            $duration = $task->getTotalTimeSpent();
+
+            $totalTime->h += $duration->h;
+            $totalTime->i += $duration->i;
+            $totalTime->s += $duration->s;
+
+            $totalTime->i += intdiv($totalTime->s, 60);
+            $totalTime->s = $totalTime->s % 60;
+
+            $totalTime->h += intdiv($totalTime->i, 60);
+            $totalTime->i = $totalTime->i % 60;
+        }
+
+        return $totalTime;
+    }
+
+    public function getTotalTimeSpentAttribute() {
+        $totalTime = $this->getTotalTimeSpent();
+        return sprintf('%02d:%02d:%02d', $totalTime->h, $totalTime->i, $totalTime->s);
     }
 }

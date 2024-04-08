@@ -1,0 +1,9 @@
+tasks:
+    label: Task    
+    deferredBinding: true
+    view:
+        list: $/teamgrid/tasks/models/task/columns.yaml
+        toolbarButtons: create|delete
+    manage:
+        form: $/teamgrid/tasks/models/task/fields.yaml
+        recordsPerPage: 10

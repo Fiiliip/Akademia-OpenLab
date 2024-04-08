@@ -1,6 +1,8 @@
 <?php namespace TeamGrid\Tasks\Models;
 
 use Model;
+use DateTime;
+use DateInterval;
 
 /**
  * Task Model
@@ -99,5 +101,35 @@ class Task extends Model
         $totalTaskCount == $completedTaskCount ? $project->is_completed = true : $project->is_completed = false;
         
         $project->save();
+
+        if ($this->start_time && $this->end_time) {
+            $start_time = new DateTime($this->start_time);
+            $this->planned_time = $start_time->diff(new DateTime($this->end_time));
+            $this->save();
+        }
+    }
+
+    public function getTotalTimeSpent() {
+        $totalTime = new DateInterval("PT0S");
+        foreach ($this->time_entries as $time_entry) {
+            $duration = $time_entry->getDuration();
+
+            $totalTime->h += $duration->h;
+            $totalTime->i += $duration->i;
+            $totalTime->s += $duration->s;
+
+            $totalTime->i += intdiv($totalTime->s, 60);
+            $totalTime->s = $totalTime->s % 60;
+
+            $totalTime->h += intdiv($totalTime->i, 60);
+            $totalTime->i = $totalTime->i % 60;
+        }
+
+        return $totalTime;
+    }
+
+    public function getTotalTimeSpentAttribute() {
+        $totalTime = $this->getTotalTimeSpent();
+        return sprintf('%02d:%02d:%02d', $totalTime->h, $totalTime->i, $totalTime->s);
     }
 }
