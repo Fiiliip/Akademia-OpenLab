@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Video Tag
+
+# Model Form Field configuration
+form: $/fiiliip/videomanager/models/videotag/fields.yaml
+
+# Model Class name
+modelClass: Fiiliip\VideoManager\Models\VideoTag
+
+# Default redirect location
+defaultRedirect: fiiliip/videomanager/videotags
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: fiiliip/videomanager/videotags/update/:id
+    redirectClose: fiiliip/videomanager/videotags
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: fiiliip/videomanager/videotags
+    redirectClose: fiiliip/videomanager/videotags
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
