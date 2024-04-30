@@ -1,0 +1,18 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+
+    # TODO: Zobraziť tag v peknom formáte.
+    # TODO: Zobraziť video v peknom formáte.
+
+    # tag:
+    #     label: Title
+    #     searchable: true
+    # video:
+    #     label: Title
+    #     searchable: true

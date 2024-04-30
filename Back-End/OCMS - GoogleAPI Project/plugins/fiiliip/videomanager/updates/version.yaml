@@ -1,1 +1,7 @@
-1.0.1: First version of VideoManager
+1.0.1: 
+- First version of VideoManager
+- create_videos_table.php
+- create_categories_table.php
+- create_video_categories_table.php
+- create_tags_table.php
+- create_video_tags_table.php

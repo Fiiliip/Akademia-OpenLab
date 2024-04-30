@@ -6,3 +6,28 @@ fields:
     id:
         label: ID
         disabled: true
+    title:
+        label: Title
+        disabled: false
+
+    # TODO: Zobraz zoznam kategórii.
+    # TODO: Zobraz autora v peknom formáte.
+    # TODO: Zobraz zoznam tagov.
+    # TODO: Zobraz trvanie videa v peknom formáte.
+    
+    # categories:
+    #     label: Categories
+    #     disabled: false
+    # author:
+    #     label: Author
+    #     disabled: false
+    # tags:
+    #     label: Tags
+    #     disabled: false
+    # duration:
+    #     label: Duration
+    #     disabled: true
+
+    views:
+        label: Views
+        disabled: true

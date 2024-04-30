@@ -81,12 +81,10 @@ class Plugin extends PluginBase
      */
     public function registerNavigation()
     {
-        return []; // Remove this line to activate
-
         return [
             'videomanager' => [
                 'label'       => 'VideoManager',
-                'url'         => Backend::url('fiiliip/videomanager/mycontroller'),
+                'url'         => Backend::url('fiiliip/videomanager/videos'),
                 'icon'        => 'icon-leaf',
                 'permissions' => ['fiiliip.videomanager.*'],
                 'order'       => 500,

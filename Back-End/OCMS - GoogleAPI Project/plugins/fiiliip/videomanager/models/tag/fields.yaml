@@ -6,3 +6,8 @@ fields:
     id:
         label: ID
         disabled: true
+    title:
+        label: ID
+        disabled: false
+    
+    # TODO: Zoznam videí s týmto tagom.

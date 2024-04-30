@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Video Category
+
+# Model Form Field configuration
+form: $/fiiliip/videomanager/models/videocategory/fields.yaml
+
+# Model Class name
+modelClass: Fiiliip\VideoManager\Models\VideoCategory
+
+# Default redirect location
+defaultRedirect: fiiliip/videomanager/videocategories
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: fiiliip/videomanager/videocategories/update/:id
+    redirectClose: fiiliip/videomanager/videocategories
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: fiiliip/videomanager/videocategories
+    redirectClose: fiiliip/videomanager/videocategories
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

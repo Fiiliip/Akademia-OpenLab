@@ -6,3 +6,22 @@ columns:
     id:
         label: ID
         searchable: true
+    title:
+        label: Title
+        searchable: true
+    categories:
+        label: Categories
+        searchable: true
+    author:
+        label: Author
+        searchable: true
+    tags:
+        label: Tags
+        searchable: true
+    duration:
+        label: Duration
+        searchable: false
+    views:
+        label: Views
+        searchable: false
+    
